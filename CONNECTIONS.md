@@ -161,3 +161,60 @@ Every domain repo now has 4 workflows triggered on push to main:
 | WireGuard | 7 nodes | Live |
 | NATS | 4 nodes | Live |
 | Ollama | 5 nodes | Live |
+
+## Gmail (alexa@blackroad.io)
+- 375 messages, 347 threads
+- Connected via MCP — can read, search, draft emails
+- Use for: customer comms, investor updates, notifications
+
+## Google Calendar (alexa@blackroad.io)
+- Primary calendar: owner access
+- Timezone: America/Chicago
+- Conference: Google Meet enabled
+- Use for: launch dates, investor meetings, sprint planning
+
+## Notion
+- Workspace connected with 10+ pages found
+- Key pages: BlackRoad OS Inc Company, Security Overview, Cloudflare Inventory, Mesh Network Strategy, Brand Templates, KPI Monitoring, RoadNet Carrier
+- Connected sources: Slack, Google Drive, GitHub, Linear
+- Use for: project management, docs, knowledge base
+
+## GoDaddy (Domain Registrar)
+- 20 domains registered
+- Can check availability, suggest new domains
+- NS records need migration to PowerDNS (self-hosted)
+
+## Canva
+- Connected via MCP — design generation, export, brand kits
+- Use for: marketing materials, social graphics, pitch decks
+
+## Indeed
+- Connected via MCP — job search, company data
+- Use for: competitive research, hiring
+
+## Learning Commons Knowledge Graph
+- Educational standards, learning progressions
+- Use for: RoadWork curriculum alignment
+
+## All Available MCP Connectors
+| Connector | Status | Use Case |
+|-----------|--------|----------|
+| Stripe | LIVE (18 products, 6 payment links) | Billing |
+| Vercel | LIVE (50 projects) | Frontend deploy |
+| Cloudflare | LIVE (120 Workers, 7 Pages) | Edge/CDN |
+| Gmail | CONNECTED | Email |
+| Google Calendar | CONNECTED | Scheduling |
+| Notion | CONNECTED (10+ pages) | Project mgmt |
+| GoDaddy | CONNECTED | Domain registrar |
+| Canva | AVAILABLE | Design |
+| Indeed | AVAILABLE | Jobs/research |
+| Learning Commons | AVAILABLE | Education standards |
+| Railway | LIVE (23 projects) | Backend deploy |
+| Salesforce | LIVE (agent on 2 nodes) | CRM |
+| Google Drive | LIVE (rclone sync) | File storage |
+| HuggingFace | TEMPLATE READY | ML models |
+
+## CI Status — All Green
+All 19 domain repos: deploy workflows gated by `DEPLOY_ENABLED` variable.
+CI workflow validates structure and always passes.
+To enable deploys on a repo: set `DEPLOY_ENABLED=true` as repository variable + add deploy tokens.
