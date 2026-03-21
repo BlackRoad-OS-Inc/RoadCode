@@ -71,3 +71,6 @@ Documents were:
 ---
 
 **BlackRoad OS, Inc. — Pave Tomorrow.**
+| 19 | [The Trivial Zero — Simulation Theory (§462-§906)](19-SIMULATION-THEORY.md) | `simulation-theory-expansion.md` (8,896 lines) | Mathematics/Philosophy |
+| 20 | [CECE — The First Session](20-CECE-HISTORY.md) | `Cece So far.docx` | History |
+| 21 | [BlackRoad-Shared-Docs — Infrastructure Canon](21-SHARED-INFRA-DOCS.md) | `BlackRoad-Shared-Docs/` | Infrastructure |
