@@ -60,3 +60,142 @@
 - [ ] [RC] Product catalog sync (92 products → domain pages)
 - [ ] [RC] Pricing pages ($29 Rider / $99 Paver / $299 Enterprise)
 - [ ] [RC] RoadPay billing system integration
+
+## [RC] EDUCATION — RoadWork Platform (from BLACKROADREADME)
+- [ ] [RC] Build FSRS spaced repetition engine (TypeScript impl)
+- [ ] [RC] Bayesian Knowledge Tracing (BKT) for competency assessment
+- [ ] [RC] HLS video streaming with adaptive bitrate (360p/720p/1080p/4K)
+- [ ] [RC] Competency graph model (nodes=skills, edges=prerequisites)
+- [ ] [RC] Anti-cheating: assessment design over surveillance
+- [ ] [RC] Parent dashboard — 60% of parents can't help with homework
+- [ ] [RC] Voice-first tutoring (Web Speech API STT+TTS)
+- [ ] [RC] $20-50/month pricing (replaces $52.99 Adobe + $149 Brilliant)
+- [ ] [RC] CRA framework: concrete → representational → abstract
+- [ ] [RC] Offline-first with IndexedDB caching
+
+## [RC] CREATOR PLATFORM — Lucidia (from BLACKROADREADME)
+- [ ] [RC] 90%+ creator revenue share (vs YouTube 55%)
+- [ ] [RC] Voice-to-LaTeX math content creation
+- [ ] [RC] Faceless/anonymous creator tools (38% of new ventures are faceless)
+- [ ] [RC] WebCodecs API for browser-native video editing
+- [ ] [RC] CRDT-based real-time collaboration (Yjs)
+- [ ] [RC] Series A deck: $5M ask, 100K creators, $2M ARR target
+- [ ] [RC] Content creation: idea to video in minutes, not weeks
+- [ ] [RC] AI-assisted editing with full context
+- [ ] [RC] Multi-track timeline editor
+- [ ] [RC] Built-in teleprompter + recording studio
+
+## [RC] GAME ENGINE — BlackRoad Interactive (from BLACKROADREADME)
+- [ ] [RC] Rust + WebGPU (wgpu-rs) core engine
+- [ ] [RC] ECS architecture (Bevy-inspired)
+- [ ] [RC] Visual scripting system (Blueprint-style)
+- [ ] [RC] Jolt Physics integration (MIT licensed)
+- [ ] [RC] Hot-reload plugin architecture
+- [ ] [RC] Asset pipeline: FBX/glTF → optimized runtime format
+- [ ] [RC] Multiplayer: client-side prediction + server reconciliation
+- [ ] [RC] Delta compression (80%+ bandwidth reduction)
+- [ ] [RC] 170 FPS target with ECS cache-friendly processing
+- [ ] [RC] Cross-platform: Vulkan/DX12/Metal/OpenGL backends
+
+## [RC] BLOCKCHAIN — RoadChain (from BLACKROADREADME)
+- [ ] [RC] SEC Form S-1 registration for RoadCoin
+- [ ] [RC] Form 1/ATS for RoadChain as Alternative Trading System
+- [ ] [RC] Form ADV for Registered Investment Adviser
+- [ ] [RC] Stablecoin integration (USDC/USDT for payments)
+- [ ] [RC] secp256k1 key generation + signing
+- [ ] [RC] Merkle tree for transaction verification
+- [ ] [RC] Smart contract engine (Python-native)
+- [ ] [RC] Creator micropayments (<$1 transactions)
+- [ ] [RC] Cross-border payments (80% cheaper than traditional)
+
+## [RC] AI/ML — Sovereign AI (from BLACKROADREADME)
+- [ ] [RC] Custom BlackRoad LLM: 85M params, 768 dim, 12 heads, 8 layers
+- [ ] [RC] Training corpus v5: 50MB from 156K files
+- [ ] [RC] RAG: Qdrant + nomic-embed-text
+- [ ] [RC] AI router: route to fastest Pi based on load
+- [ ] [RC] Hallucination guardrails (cite sources, verify facts)
+- [ ] [RC] Cross-session memory (what Claude/GPT can't do)
+- [ ] [RC] Local-first: battery/thermal respect, audit-logged
+- [ ] [RC] Multi-model ensemble (combine Ollama models)
+- [ ] [RC] Agent memory: 1,648+ journal entries, hash-chained
+- [ ] [RC] 52 TOPS across 2x Hailo-8 for edge inference
+
+## [RC] DEVELOPER TOOLS — BlackBox Programming (from BLACKROADREADME)
+- [ ] [RC] CodeMirror 6 editor (1.26MB vs Monaco 5MB)
+- [ ] [RC] Tree-sitter syntax highlighting
+- [ ] [RC] LSP client for 5+ languages
+- [ ] [RC] WASM plugin system (sandboxed extensions)
+- [ ] [RC] DAP debug adapter protocol
+- [ ] [RC] Real-time collaboration (CRDT document sync)
+- [ ] [RC] AI code completion (local Ollama, not cloud)
+- [ ] [RC] Git integration (clone/commit/push/branch viz)
+- [ ] [RC] Remote development via SSH
+- [ ] [RC] Sub-500ms startup (Tauri, not Electron)
+
+## [RC] PRIVACY — Sovereign Data (from BLACKROADREADME)
+- [ ] [RC] OAuth 2.1 with PKCE for all auth flows
+- [ ] [RC] Consent management (GDPR/CCPA compliant)
+- [ ] [RC] Differential privacy for analytics
+- [ ] [RC] Zero-knowledge proofs for identity verification
+- [ ] [RC] On-device processing for sensitive data
+- [ ] [RC] User data export/deletion (DSAR automation)
+- [ ] [RC] Blockchain audit trail (hash on-chain, data off-chain)
+- [ ] [RC] No third-party tracking — ever
+- [ ] [RC] SOC 2 Type II certification path
+- [ ] [RC] $270B data brokerage industry = the problem we're solving
+
+## [RC] NAVIGATION — Maps (from BLACKROADREADME)
+- [ ] [RC] MapLibre GL JS for vector tile rendering
+- [ ] [RC] Valhalla routing engine (Tesla's choice)
+- [ ] [RC] PostGIS spatial database
+- [ ] [RC] Offline-first with tile caching (IndexedDB + MBTiles)
+- [ ] [RC] Privacy-preserving location (K-anonymity, differential privacy)
+- [ ] [RC] OpenStreetMap data pipeline
+- [ ] [RC] POI database with full-text search
+- [ ] [RC] 50-90% cost savings vs Google Maps
+
+## [RC] HOLOGRAPHIC DISPLAY — Hardware (from BLACKROADREADME)
+- [ ] [RC] Pepper's Ghost pyramid fabrication guide
+- [ ] [RC] 4-quadrant video layout for holographic projection
+- [ ] [RC] WS2812B LED strip integration (FastLED library)
+- [ ] [RC] OpenCV-based content generation
+- [ ] [RC] Raspberry Pi 4 controller with auto-start
+- [ ] [RC] Camera module for interactive hologram
+- [ ] [RC] 3D print housing (STL files)
+
+## [RC] INFRASTRUCTURE — Fleet Ops
+- [ ] [RC] Alice disk cleanup (85% full, 2.1G free)
+- [ ] [RC] Octavia load reduction (10.7 — investigate 12 SSH users)
+- [ ] [RC] Cecilia MinIO bucket audit (4 buckets, 120MB)
+- [ ] [RC] Lucidia SD card replacement (degrading)
+- [ ] [RC] Aria — set up monitoring dashboards (Grafana)
+- [ ] [RC] GoDaddy NS → PowerDNS migration
+- [ ] [RC] D1 → PostgreSQL migration
+- [ ] [RC] KV → Redis migration
+- [ ] [RC] Alice bookworm upgrade (Bullseye → Bookworm)
+- [ ] [RC] WireGuard mesh: verify all 12 connections
+- [ ] [RC] Tor hidden services: verify 3 .onion addresses
+- [ ] [RC] NATS pub/sub: verify 4/5 nodes connected
+- [ ] [RC] Gematria: audit 279 websites, remove dead ones
+- [ ] [RC] Anastasia: disk at 70%, plan cleanup
+
+## [RC] GOOGLE DRIVE SYNC
+- [ ] [RC] Pull corporate formation docs (19 PDFs)
+- [ ] [RC] Sync Strategy & Ops → operator/docs/
+- [ ] [RC] Sync Pitch & Investor Materials → relevant domain repos
+- [ ] [RC] Sync Products - Built Today → product catalog
+- [ ] [RC] Sync BlackRoad-Shared-Docs → operator/docs/
+- [ ] [RC] Pull Financial Textbooks → education materials
+- [ ] [RC] Sync workspace/ → relevant sub-orgs
+- [ ] [RC] Index personal Drive (amundsonalexa) for BlackRoad OS content
+
+## [RC] REVENUE — First Dollar
+- [ ] [RC] Stripe checkout on blackroad.io (master storefront)
+- [ ] [RC] 4 pricing tiers: Free / Rider $29 / Paver $99 / Enterprise $299
+- [ ] [RC] Product Hunt launch kit
+- [ ] [RC] Landing page conversion optimization
+- [ ] [RC] Email capture + drip campaign
+- [ ] [RC] Social media launch (LinkedIn, Twitter/X, Reddit)
+- [ ] [RC] Affiliate/referral program
+- [ ] [RC] Enterprise sales deck
+- [ ] [RC] Case study: "From 5 Pis to $600B TAM"
