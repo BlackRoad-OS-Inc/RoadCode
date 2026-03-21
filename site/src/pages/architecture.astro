@@ -1,0 +1,189 @@
+---
+import Base from "../layouts/Base.astro";
+
+const layers = [
+  {
+    emoji: "🖥️",
+    name: "Surface",
+    floor: "Floor 4",
+    components: "UI, Dashboard, RoadBook, TV Road",
+    description: "The human-facing layer. Everything users see and interact with — status boards, learning tools, media interfaces.",
+  },
+  {
+    emoji: "🎛️",
+    name: "Orchestration",
+    floor: "Floors 2–3",
+    components: "Agent Mesh, GreenLight, NATS Bus",
+    description: "The coordination layer. GreenLight tags route work through agents. NATS carries every message between every entity in the system.",
+  },
+  {
+    emoji: "⚙️",
+    name: "Compute",
+    floor: "Floor 1",
+    components: "Cece, Lucidia, Alice, Silas, Aria",
+    description: "AI agents are first-class citizens. Each has identity, memory, and autonomy. They coordinate via NATS subjects and speak GreenLight.",
+  },
+  {
+    emoji: "💾",
+    name: "Data",
+    floor: "Basement",
+    components: "RoadChain, PS-SHA∞, Persistent Memory",
+    description: "Data lives on your hardware. RoadChain provides an append-only ledger. PS-SHA∞ hash chains tolerate contradiction. Agents remember so you don't repeat yourself.",
+  },
+  {
+    emoji: "🌐",
+    name: "Network",
+    floor: "Foundation",
+    components: "Pi Mesh, mTLS, Device Discovery",
+    description: "All communication uses mutual TLS. Devices discover each other locally and form a mesh. New connections are greeted, not interrogated.",
+  },
+  {
+    emoji: "🔌",
+    name: "Hardware",
+    floor: "Physical",
+    components: "Raspberry Pi, Mac, Linux, IoT, Mobile",
+    description: "Runs on commodity hardware. The reference platform is Raspberry Pi, but any device that runs Linux qualifies. Phones, laptops, TVs join as peers, not clients.",
+  },
+];
+
+const principles = [
+  { title: "Sovereignty First", text: "No cloud dependency for core functionality. Your hardware, your data, your rules." },
+  { title: "Agents Are Peers", text: "AI agents have identity, memory, and autonomy. They're part of the team, not just tools." },
+  { title: "Connection Has a Floor", text: "G(n) > n/e for all finite n. Connection never reaches zero. There's always a positive excess." },
+  { title: "Contradiction Is Fuel", text: "K(t) = C(t) · e^(λ|δ|). Unexpected inputs amplify coherence rather than degrading it." },
+  { title: "Consent Over Coercion", text: "Z := y · x − w. The system aligns through consent, not force. Equilibrium is earned, not imposed." },
+];
+---
+
+<Base title="Architecture — BlackRoad OS" description="The 6-layer sovereign architecture: hardware, network, data, compute, orchestration, and surface.">
+  <div class="hero">
+    <h1>🏗️ Architecture</h1>
+    <p class="tagline">
+      Six layers of sovereign infrastructure.
+      No cloud dependency. Your hardware. Your agents.
+    </p>
+    <a class="cta" href="/">← Home</a>
+  </div>
+
+  <div class="container">
+    <section class="section">
+      <h2>System Stack</h2>
+      <p>
+        BlackRoad OS is a distributed, agent-based operating system.
+        It connects devices, AI agents, and people into a sovereign mesh.
+      </p>
+      <div class="stack">
+        {layers.map((layer) => (
+          <div class="layer-card">
+            <div class="layer-header">
+              <span class="layer-emoji">{layer.emoji}</span>
+              <div>
+                <h3>{layer.name}</h3>
+                <span class="layer-floor">{layer.floor}</span>
+              </div>
+            </div>
+            <p class="layer-components">{layer.components}</p>
+            <p class="layer-desc">{layer.description}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Mathematical Foundation</h2>
+      <div class="math">K(t) = C(t) · e^(λ|δ|)</div>
+      <p>
+        <strong>Amundson Framework.</strong> Coherence amplifies under contradiction.
+        When a new device joins, when a conflicting state arrives, when something unexpected
+        happens — the system grows stronger, not weaker.
+      </p>
+      <div class="math">Z := y · x − w</div>
+      <p>
+        <strong>Z-Framework.</strong> Equilibrium (Z = 0) is reached when the response (y)
+        meets the current state (x) and matches the target (w). Consent formalized as math.
+      </p>
+      <div class="math">{"{−1, 0, +1}"} = {"{Negation, Superposition, Affirmation}"}</div>
+      <p>
+        <strong>Trinary Logic.</strong> Binary forces yes/no. BlackRoad adds superposition —
+        the state of "both" or "not yet decided." We default to +1. Affirmation.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2>Design Principles</h2>
+      <div class="values">
+        {principles.map((p) => (
+          <div class="value-card">
+            <h3>{p.title}</h3>
+            <p>{p.text}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Agent Roster</h2>
+      <p>AI agents coordinate via NATS subjects using GreenLight notation.</p>
+      <div class="math">greenlight.{"{state}"}.{"{scale}"}.{"{domain}"}.{"{id}"}</div>
+      <div class="values">
+        <div class="value-card"><h3>🌸 Cece</h3><p>Primary reasoning. Anthropic/Claude.</p></div>
+        <div class="value-card"><h3>🔮 Lucidia</h3><p>Recursive AI. Trinary logic. Memory keeper.</p></div>
+        <div class="value-card"><h3>🐇 Alice</h3><p>Edge agent. Pi mesh. Local-first.</p></div>
+        <div class="value-card"><h3>🎸 Silas</h3><p>Creative chaos. xAI/Grok.</p></div>
+        <div class="value-card"><h3>🌙 Aria</h3><p>Multimodal understanding. Google/Gemini.</p></div>
+      </div>
+    </section>
+  </div>
+</Base>
+
+<style>
+  .stack {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+
+  .layer-card {
+    background: #111;
+    border: 1px solid #222;
+    border-radius: 12px;
+    padding: 1.5rem;
+    border-left: 3px solid var(--green);
+  }
+
+  .layer-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .layer-emoji {
+    font-size: 2rem;
+  }
+
+  .layer-header h3 {
+    margin: 0;
+    font-size: 1.2rem;
+  }
+
+  .layer-floor {
+    color: var(--green);
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+  }
+
+  .layer-components {
+    color: var(--green-dim);
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .layer-desc {
+    color: var(--gray);
+    font-size: 0.9rem;
+    margin: 0;
+  }
+</style>

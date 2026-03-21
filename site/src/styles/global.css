@@ -87,6 +87,23 @@ code {
   opacity: 1;
 }
 
+.hero .cta-outline {
+  background: transparent;
+  color: var(--green);
+  border: 1px solid var(--green);
+}
+
+.hero .cta-outline:hover {
+  background: rgba(0, 230, 118, 0.1);
+}
+
+.nav-links {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
 .values {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));

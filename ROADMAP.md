@@ -27,7 +27,7 @@ RoadCode is the canonical specification hub for BlackRoad OS. We're building the
 - ✅ NATS subject schema specification ([docs/API.md](docs/API.md))
 - ✅ GreenLight API specification (REST + NATS) ([docs/API.md](docs/API.md))
 - ✅ GreenLight data model and lifecycle state machine ([docs/DATA-MODEL.md](docs/DATA-MODEL.md))
-- 📋 Agent identity and capability protocol
+- ✅ Agent identity and capability protocol ([docs/AGENT-PROTOCOL.md](docs/AGENT-PROTOCOL.md))
 - 📋 PS-SHA∞ hash chain specification
 - 📋 Device discovery and mTLS onboarding protocol
 - 📋 RoadChain ledger format specification

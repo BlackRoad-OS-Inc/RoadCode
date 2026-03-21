@@ -26,6 +26,7 @@ build-packages: ## Build @roadcode/greenlight and CLI packages
 test: build-packages ## Run all package tests
 	@echo "🧪 Running tests..."
 	@npm test -w @roadcode/greenlight
+	@npm test -w @roadcode/greenlight-cli
 
 serve: ## Start local dev server (site/)
 	@echo "🚀 Starting dev server..."

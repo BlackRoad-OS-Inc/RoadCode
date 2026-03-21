@@ -7,7 +7,10 @@
     "greenlight": "./bin/greenlight.js"
   },
   "scripts": {
-    "build": "tsc"
+    "build": "tsc",
+    "test": "node --test dist/tests/cli.test.js",
+    "prebuild": "npx tsc -b ../greenlight",
+    "pretest": "tsc"
   },
   "dependencies": {
     "@roadcode/greenlight": "0.1.0"
