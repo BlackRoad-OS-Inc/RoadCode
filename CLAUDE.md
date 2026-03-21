@@ -35,9 +35,15 @@ RoadCode/
 │   │   ├── src/
 │   │   │   ├── index.ts           # Public exports
 │   │   │   ├── types.ts           # Type system, enums, constants
-│   │   │   └── parser.ts          # Parse, serialize, validate, NATS
+│   │   │   ├── parser.ts          # Parse, serialize, validate
+│   │   │   ├── state-machine.ts   # Lifecycle transitions, terminal states
+│   │   │   ├── trinary.ts         # Trinary logic, Amundson/Z-Framework
+│   │   │   └── nats.ts            # NATS subject builder, message validation
 │   │   └── tests/
-│   │       └── parser.test.ts     # 19 tests (node:test)
+│   │       ├── parser.test.ts     # Parser/serializer tests
+│   │       ├── state-machine.test.ts  # Transition tests
+│   │       ├── trinary.test.ts    # Math framework tests
+│   │       └── nats.test.ts       # NATS schema tests (76 total)
 │   └── greenlight-cli/            # @roadcode/greenlight-cli — CLI tool
 │       ├── src/cli.ts             # CLI commands (parse, serialize, validate, nats, list)
 │       └── bin/greenlight.js      # Entry point

@@ -13,7 +13,7 @@
   },
   "scripts": {
     "build": "tsc",
-    "test": "node --test dist/tests/parser.test.js",
+    "test": "node --test dist/tests/parser.test.js dist/tests/state-machine.test.js dist/tests/trinary.test.js dist/tests/nats.test.js",
     "pretest": "tsc"
   },
   "license": "UNLICENSED",
