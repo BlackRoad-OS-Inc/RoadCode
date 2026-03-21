@@ -1,0 +1,40 @@
+version: 2
+updates:
+  # Root package.json
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+    labels:
+      - "🔧 infra"
+      - "dependencies"
+    commit-message:
+      prefix: "🔧"
+    open-pull-requests-limit: 10
+
+  # Astro site
+  - package-ecosystem: "npm"
+    directory: "/site"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+    labels:
+      - "🖥️ site"
+      - "dependencies"
+    commit-message:
+      prefix: "🖥️"
+    open-pull-requests-limit: 5
+
+  # GitHub Actions
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+    labels:
+      - "🔧 infra"
+      - "dependencies"
+    commit-message:
+      prefix: "🔧"
+    open-pull-requests-limit: 5

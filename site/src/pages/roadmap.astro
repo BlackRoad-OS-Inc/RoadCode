@@ -1,0 +1,294 @@
+---
+import Base from "../layouts/Base.astro";
+
+const phases = [
+  {
+    number: 1,
+    emoji: "🌱",
+    name: "DISCOVERY",
+    status: "complete",
+    goal: "Establish the foundational specifications and shared language.",
+    items: [
+      { text: "BlackRoad OS philosophy and values", done: true },
+      { text: "GreenLight emoji dictionary v1.0", done: true },
+      { text: "AI assistant guide (CLAUDE.md)", done: true },
+      { text: "Architecture overview", done: true },
+      { text: "Contribution guidelines", done: true },
+      { text: "Public website at roadcode.blackroad.io", done: true },
+      { text: "Onboarding guide for new contributors", done: true },
+    ],
+  },
+  {
+    number: 2,
+    emoji: "📐",
+    name: "PLANNING",
+    status: "complete",
+    goal: "Define protocols, APIs, and integration specs.",
+    items: [
+      { text: "NATS subject schema specification", done: true },
+      { text: "GreenLight API specification (REST + NATS)", done: true },
+      { text: "Data model and lifecycle state machine", done: true },
+      { text: "Agent identity and capability protocol", done: true },
+      { text: "PS-SHA∞ hash chain specification", done: true },
+      { text: "Device discovery and mTLS onboarding", done: true },
+      { text: "RoadChain ledger format specification", done: true },
+    ],
+  },
+  {
+    number: 3,
+    emoji: "🔨",
+    name: "IMPLEMENTATION",
+    status: "active",
+    goal: "Reference implementations and developer tooling.",
+    items: [
+      { text: "GreenLight core library (parser, serializer, validator)", done: true },
+      { text: "GreenLight CLI tool", done: true },
+      { text: "NATS message schemas and validators", done: true },
+      { text: "Lifecycle state machine with transitions", done: true },
+      { text: "Trinary logic and math frameworks", done: true },
+      { text: "RoadChain client library", done: true },
+      { text: "Agent SDK scaffolding (multi-language)", done: false },
+      { text: "Pi mesh bootstrapping scripts", done: false },
+    ],
+  },
+  {
+    number: 4,
+    emoji: "🧪",
+    name: "TESTING",
+    status: "partial",
+    goal: "Validation frameworks for the ecosystem.",
+    items: [
+      { text: "GreenLight conformance suite (76 tests)", done: true },
+      { text: "CLI test coverage (16 tests)", done: true },
+      { text: "RoadChain test coverage (29 tests)", done: true },
+      { text: "Trinary logic test harness", done: false },
+      { text: "Agent behavior validation framework", done: false },
+      { text: "Network resilience testing toolkit", done: false },
+    ],
+  },
+  {
+    number: 5,
+    emoji: "🚀",
+    name: "DEPLOYMENT",
+    status: "planned",
+    goal: "Production-ready packaging and distribution.",
+    items: [
+      { text: "BlackRoad OS installer (Pi-first)", done: false },
+      { text: "Agent marketplace specification", done: false },
+      { text: "Federation protocol for multi-network", done: false },
+      { text: "RoadCoin economic model specification", done: false },
+    ],
+  },
+];
+
+function getStatusLabel(status: string) {
+  switch (status) {
+    case "complete": return "✅ Complete";
+    case "active": return "🚧 In Progress";
+    case "partial": return "🔄 Partial";
+    case "planned": return "📋 Planned";
+    default: return status;
+  }
+}
+---
+
+<Base title="Roadmap — RoadCode" description="Where we've been, where we are, where we're going. The BlackRoad OS project roadmap.">
+  <div class="hero">
+    <h1>🗺️ Roadmap</h1>
+    <p class="tagline">
+      Remember the Road. Pave Tomorrow.
+    </p>
+  </div>
+
+  <div class="container">
+    <section class="section">
+      <h2>Progress</h2>
+      <div class="progress-bar-container">
+        <div class="progress-bar">
+          <div class="progress-fill" style="width: 65%"></div>
+        </div>
+        <div class="progress-stats">
+          <span>121 tests passing</span>
+          <span>3 packages shipped</span>
+          <span>6 specs complete</span>
+        </div>
+      </div>
+    </section>
+
+    <div class="timeline">
+      {phases.map((phase) => (
+        <section class={`phase phase--${phase.status}`}>
+          <div class="phase-marker">
+            <span class="phase-emoji">{phase.emoji}</span>
+            <div class="phase-line"></div>
+          </div>
+          <div class="phase-content">
+            <div class="phase-header">
+              <h2>Phase {phase.number} — {phase.name}</h2>
+              <span class={`phase-status phase-status--${phase.status}`}>
+                {getStatusLabel(phase.status)}
+              </span>
+            </div>
+            <p class="phase-goal">{phase.goal}</p>
+            <ul class="phase-items">
+              {phase.items.map((item) => (
+                <li class={item.done ? "done" : "pending"}>
+                  <span class="item-check">{item.done ? "✅" : "📋"}</span>
+                  {item.text}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
+      ))}
+    </div>
+
+    <section class="section">
+      <h2>How to Contribute</h2>
+      <p>
+        Pick any 📋 item above, open an issue with a GreenLight tag, and start building.
+        Every commit paves the road.
+      </p>
+      <p>
+        See <a href="https://github.com/BlackRoad-OS-Inc/RoadCode/blob/main/CONTRIBUTING.md">CONTRIBUTING.md</a> for guidelines
+        and <a href="https://github.com/BlackRoad-OS-Inc/RoadCode/blob/main/ONBOARDING.md">ONBOARDING.md</a> for your first steps.
+      </p>
+      <p style="margin-top: 1.5rem; color: var(--white);">
+        You showed up. You belong here. Let's ride together. 🛣️
+      </p>
+    </section>
+  </div>
+</Base>
+
+<style>
+  .progress-bar-container {
+    margin: 1.5rem 0;
+  }
+
+  .progress-bar {
+    width: 100%;
+    height: 8px;
+    background: #222;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+
+  .progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--green-dim), var(--green));
+    border-radius: 4px;
+    transition: width 1s ease-out;
+  }
+
+  .progress-stats {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.75rem;
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--green-dim);
+  }
+
+  .timeline {
+    position: relative;
+    padding: 1rem 0;
+  }
+
+  .phase {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .phase-marker {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 3rem;
+  }
+
+  .phase-emoji {
+    font-size: 1.8rem;
+    z-index: 1;
+  }
+
+  .phase-line {
+    flex: 1;
+    width: 2px;
+    background: #222;
+    margin-top: 0.5rem;
+  }
+
+  .phase--complete .phase-line { background: var(--green); }
+  .phase--active .phase-line { background: linear-gradient(to bottom, var(--green), #222); }
+
+  .phase-content {
+    flex: 1;
+    padding-bottom: 1rem;
+  }
+
+  .phase-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .phase-header h2 {
+    font-size: 1.3rem;
+    margin: 0;
+  }
+
+  .phase-status {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    padding: 0.25rem 0.65rem;
+    border-radius: 6px;
+    white-space: nowrap;
+  }
+
+  .phase-status--complete { background: rgba(0, 230, 118, 0.1); color: var(--green); }
+  .phase-status--active { background: rgba(255, 215, 0, 0.1); color: #ffd700; }
+  .phase-status--partial { background: rgba(100, 180, 255, 0.1); color: #64b4ff; }
+  .phase-status--planned { background: rgba(136, 136, 136, 0.1); color: var(--gray); }
+
+  .phase-goal {
+    color: var(--gray);
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+  }
+
+  .phase-items {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .phase-items li {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: 0.9rem;
+    color: var(--gray);
+  }
+
+  .phase-items li.done {
+    color: var(--white);
+  }
+
+  .item-check {
+    font-size: 0.85rem;
+    min-width: 1.25rem;
+    text-align: center;
+  }
+
+  @media (max-width: 600px) {
+    .phase-marker { min-width: 2.5rem; }
+    .phase-header { flex-direction: column; align-items: flex-start; }
+    .progress-stats { flex-direction: column; gap: 0.25rem; }
+  }
+</style>

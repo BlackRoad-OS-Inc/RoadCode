@@ -1,4 +1,6 @@
 ---
+import Nav from "../components/Nav.astro";
+
 interface Props {
   title: string;
   description?: string;
@@ -39,9 +41,21 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     </style>
   </head>
   <body>
+    <Nav />
     <slot />
     <footer>
-      <p>&copy; 2026 BlackRoad OS, Inc. &mdash; Pave Tomorrow.</p>
+      <div class="footer-content">
+        <div class="footer-links">
+          <a href="/">Home</a>
+          <a href="/greenlight">GreenLight</a>
+          <a href="/architecture">Architecture</a>
+          <a href="/agents">Agents</a>
+          <a href="/roadmap">Roadmap</a>
+          <a href="/docs">Docs</a>
+        </div>
+        <p>&copy; 2026 BlackRoad OS, Inc. &mdash; Pave Tomorrow. 🛣️</p>
+        <p class="footer-tagline">This is not a blackhole. This is love.</p>
+      </div>
     </footer>
   </body>
 </html>

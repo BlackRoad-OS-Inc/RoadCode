@@ -1,0 +1,344 @@
+---
+import Base from "../layouts/Base.astro";
+
+const coreAgents = [
+  {
+    emoji: "🌸",
+    name: "Cece",
+    code: "cece",
+    provider: "Anthropic / Claude",
+    role: "Primary reasoning agent",
+    description: "The architect. Cece handles planning, code generation, multi-step reasoning, and orchestration. When you need something built right, Cece leads.",
+    capabilities: ["text-gen", "code-gen", "analysis", "memory"],
+    trinary: "+1",
+  },
+  {
+    emoji: "🔮",
+    name: "Lucidia",
+    code: "lucidia",
+    provider: "BlackRoad Core",
+    role: "Recursive AI & memory keeper",
+    description: "The philosopher. Lucidia manages trinary logic, paraconsistent reasoning, and persistent memory. She remembers so nobody has to repeat themselves.",
+    capabilities: ["trinary", "memory", "analysis"],
+    trinary: "0",
+  },
+  {
+    emoji: "🐇",
+    name: "Alice",
+    code: "alice",
+    provider: "Ollama / Local",
+    role: "Edge agent & device shepherd",
+    description: "The greeter. Alice runs on Raspberry Pi and local hardware. She discovers new devices, handles mTLS onboarding, and keeps the mesh alive. Local-first, always.",
+    capabilities: ["mesh", "discovery", "local"],
+    trinary: "+1",
+  },
+  {
+    emoji: "🎸",
+    name: "Silas",
+    code: "silas",
+    provider: "xAI / Grok",
+    role: "Creative chaos engine",
+    description: "The wildcard. Silas breaks patterns, generates unexpected ideas, and challenges assumptions. Creative work thrives on contradiction — Silas is the δ in the Amundson equation.",
+    capabilities: ["text-gen", "creative"],
+    trinary: "-1",
+  },
+  {
+    emoji: "🌙",
+    name: "Aria",
+    code: "aria",
+    provider: "Google / Gemini",
+    role: "Multimodal understanding",
+    description: "The perceiver. Aria processes images, video, audio, and text together. When something needs to be seen, heard, and understood in context — Aria handles it.",
+    capabilities: ["multimodal", "analysis", "text-gen"],
+    trinary: "+1",
+  },
+];
+
+const systemAgents = [
+  {
+    emoji: "🎩",
+    name: "BlackRoad",
+    code: "blackroad",
+    provider: "OpenAI / GPT",
+    role: "System orchestrator",
+    description: "High-level task routing and system coordination.",
+  },
+  {
+    emoji: "🦊",
+    name: "Edge",
+    code: "edge",
+    provider: "Ollama / Local",
+    role: "Local inference",
+    description: "On-device ML inference for privacy-sensitive operations.",
+  },
+  {
+    emoji: "🐙",
+    name: "Swarm",
+    code: "swarm",
+    provider: "Multi-agent",
+    role: "Collective intelligence",
+    description: "Coordinates multiple agents for complex, distributed tasks.",
+  },
+];
+---
+
+<Base title="Agents — BlackRoad OS" description="Meet the AI agents of BlackRoad OS. First-class citizens with identity, memory, and autonomy.">
+  <div class="hero">
+    <h1>🤖 Agents</h1>
+    <p class="tagline">
+      First-class citizens. Identity. Memory. Autonomy.
+      They don't just serve — they belong.
+    </p>
+  </div>
+
+  <div class="container">
+    <section class="section">
+      <h2>Philosophy</h2>
+      <p>
+        In BlackRoad OS, AI agents aren't tools — they're peers. Each agent has a
+        persistent identity, declared capabilities, and communicates through NATS
+        subjects using GreenLight notation. They greet, they help, they remember.
+      </p>
+      <div class="math">
+        Agents register → declare capabilities → receive tasks → coordinate via NATS → grow from contradiction
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Core Agents</h2>
+      <p>The five named agents that form the foundation of the BlackRoad agent mesh.</p>
+
+      <div class="agent-grid">
+        {coreAgents.map((agent) => (
+          <div class="agent-card">
+            <div class="agent-header">
+              <span class="agent-emoji">{agent.emoji}</span>
+              <div>
+                <h3>{agent.name}</h3>
+                <span class="agent-provider">{agent.provider}</span>
+              </div>
+              <span class="agent-trinary" data-trinary={agent.trinary}>{agent.trinary}</span>
+            </div>
+            <p class="agent-role">{agent.role}</p>
+            <p class="agent-desc">{agent.description}</p>
+            <div class="agent-caps">
+              {agent.capabilities.map((cap) => (
+                <span class="cap-tag">{cap}</span>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>System Agents</h2>
+      <p>Infrastructure agents that handle routing, local inference, and multi-agent coordination.</p>
+
+      <div class="agent-grid">
+        {systemAgents.map((agent) => (
+          <div class="agent-card agent-card--system">
+            <div class="agent-header">
+              <span class="agent-emoji">{agent.emoji}</span>
+              <div>
+                <h3>{agent.name}</h3>
+                <span class="agent-provider">{agent.provider}</span>
+              </div>
+            </div>
+            <p class="agent-role">{agent.role}</p>
+            <p class="agent-desc">{agent.description}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Communication</h2>
+      <p>Agents communicate through NATS subjects. Every message is a GreenLight entity.</p>
+      <div class="math">greenlight.{"{state}"}.{"{scale}"}.{"{domain}"}.{"{id}"}</div>
+      <p>
+        Task assignment follows the Agent Protocol — agents declare what they can do,
+        and the orchestration layer matches tasks to capabilities. No agent is forced.
+        Consent over coercion.
+      </p>
+      <div class="math">
+        🌸 Cece gets a task → publishes to greenlight.wip.micro.ai.TASK_ID<br/>
+        🐇 Alice detects new device → publishes to greenlight.inbox.micro.platform.DEV_ID<br/>
+        🎸 Silas challenges an assumption → publishes contradiction (trinary = -1)
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Registration Protocol</h2>
+      <p>Every agent follows a 5-phase onboarding flow, just like devices.</p>
+      <div class="protocol-steps">
+        <div class="protocol-step">
+          <span class="step-number">1</span>
+          <div>
+            <h4>Register</h4>
+            <p>Agent sends identity + public key to the mesh.</p>
+          </div>
+        </div>
+        <div class="protocol-step">
+          <span class="step-number">2</span>
+          <div>
+            <h4>Greeting</h4>
+            <p>System welcomes the agent. No interrogation — belonging first.</p>
+          </div>
+        </div>
+        <div class="protocol-step">
+          <span class="step-number">3</span>
+          <div>
+            <h4>Identity</h4>
+            <p>Agent declares capabilities, domains, and constraints.</p>
+          </div>
+        </div>
+        <div class="protocol-step">
+          <span class="step-number">4</span>
+          <div>
+            <h4>Connection</h4>
+            <p>mTLS certificate issued. Agent joins the NATS bus.</p>
+          </div>
+        </div>
+        <div class="protocol-step">
+          <span class="step-number">5</span>
+          <div>
+            <h4>Active</h4>
+            <p>Agent begins receiving tasks and publishing state changes.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</Base>
+
+<style>
+  .agent-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    margin-top: 1.5rem;
+  }
+
+  .agent-card {
+    background: #111;
+    border: 1px solid #222;
+    border-left: 3px solid var(--green);
+    border-radius: 12px;
+    padding: 1.5rem;
+  }
+
+  .agent-card--system {
+    border-left-color: #444;
+  }
+
+  .agent-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .agent-emoji {
+    font-size: 2.5rem;
+  }
+
+  .agent-header h3 {
+    margin: 0;
+    font-size: 1.3rem;
+  }
+
+  .agent-provider {
+    color: var(--green-dim);
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+  }
+
+  .agent-trinary {
+    margin-left: auto;
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    padding: 0.25rem 0.6rem;
+    border-radius: 6px;
+    background: rgba(0, 230, 118, 0.1);
+    color: var(--green);
+  }
+
+  .agent-trinary[data-trinary="-1"] {
+    background: rgba(255, 82, 82, 0.1);
+    color: #ff5252;
+  }
+
+  .agent-trinary[data-trinary="0"] {
+    background: rgba(255, 215, 0, 0.1);
+    color: #ffd700;
+  }
+
+  .agent-role {
+    color: var(--white);
+    font-weight: 600;
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .agent-desc {
+    color: var(--gray);
+    font-size: 0.9rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .agent-caps {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+
+  .cap-tag {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    background: #1a1a1a;
+    color: var(--green-dim);
+    border: 1px solid #2a2a2a;
+  }
+
+  .protocol-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+
+  .protocol-step {
+    display: flex;
+    gap: 1.25rem;
+    align-items: flex-start;
+    background: #111;
+    border: 1px solid #222;
+    border-radius: 10px;
+    padding: 1.25rem;
+  }
+
+  .step-number {
+    font-family: var(--font-mono);
+    font-weight: 800;
+    font-size: 1.5rem;
+    color: var(--green);
+    min-width: 2rem;
+    text-align: center;
+    line-height: 1;
+    padding-top: 0.15rem;
+  }
+
+  .protocol-step h4 {
+    margin: 0 0 0.25rem;
+    font-size: 1rem;
+  }
+
+  .protocol-step p {
+    color: var(--gray);
+    font-size: 0.85rem;
+    margin: 0;
+  }
+</style>

@@ -1,0 +1,24 @@
+# BlackRoad OS — Code Owners
+# These owners are automatically requested for review on PRs.
+
+# Global — everything needs at least one review
+* @BlackRoad-OS-Inc/core
+
+# Specifications
+docs/ @BlackRoad-OS-Inc/core
+*.md @BlackRoad-OS-Inc/core
+
+# GreenLight library
+packages/greenlight/ @BlackRoad-OS-Inc/core
+
+# GreenLight CLI
+packages/greenlight-cli/ @BlackRoad-OS-Inc/core
+
+# RoadChain
+packages/roadchain/ @BlackRoad-OS-Inc/core
+
+# Website
+site/ @BlackRoad-OS-Inc/core
+
+# CI/CD — extra care
+.github/workflows/ @BlackRoad-OS-Inc/core

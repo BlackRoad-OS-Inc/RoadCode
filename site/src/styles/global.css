@@ -3,7 +3,11 @@
   --white: #f5f5f5;
   --green: #00e676;
   --green-dim: #00c853;
+  --green-glow: rgba(0, 230, 118, 0.3);
   --gray: #888;
+  --gray-dim: #555;
+  --surface: #111;
+  --border: #222;
   --font-mono: "JetBrains Mono", "Fira Code", monospace;
   --font-sans: "Inter", system-ui, sans-serif;
 }
@@ -45,15 +49,20 @@ code {
   font-size: 0.9em;
 }
 
+/* Layout */
+
 .container {
   max-width: 800px;
   margin: 0 auto;
   padding: 2rem 1.5rem;
 }
 
+/* Hero */
+
 .hero {
   text-align: center;
-  padding: 6rem 1.5rem 4rem;
+  padding: 5rem 1.5rem 3.5rem;
+  animation: fadeInUp 0.6s ease-out;
 }
 
 .hero h1 {
@@ -83,7 +92,7 @@ code {
 
 .hero .cta:hover {
   transform: translateY(-2px);
-  box-shadow: 0 4px 20px rgba(0, 230, 118, 0.3);
+  box-shadow: 0 4px 20px var(--green-glow);
   opacity: 1;
 }
 
@@ -104,28 +113,7 @@ code {
   flex-wrap: wrap;
 }
 
-.values {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1.5rem;
-  padding: 2rem 0;
-}
-
-.value-card {
-  background: #111;
-  border: 1px solid #222;
-  border-radius: 12px;
-  padding: 1.5rem;
-}
-
-.value-card h3 {
-  margin-bottom: 0.5rem;
-}
-
-.value-card p {
-  color: var(--gray);
-  font-size: 0.9rem;
-}
+/* Sections */
 
 .section {
   padding: 3rem 0;
@@ -142,8 +130,41 @@ code {
   margin-bottom: 1rem;
 }
 
+/* Cards */
+
+.values {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem 0;
+}
+
+.value-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: border-color 0.2s, transform 0.2s;
+}
+
+.value-card:hover {
+  border-color: #333;
+  transform: translateY(-1px);
+}
+
+.value-card h3 {
+  margin-bottom: 0.5rem;
+}
+
+.value-card p {
+  color: var(--gray);
+  font-size: 0.9rem;
+}
+
+/* Math blocks */
+
 .math {
-  background: #111;
+  background: var(--surface);
   border-left: 3px solid var(--green);
   padding: 1rem 1.5rem;
   margin: 1.5rem 0;
@@ -152,10 +173,68 @@ code {
   font-size: 1.1rem;
 }
 
+/* Footer */
+
 footer {
   text-align: center;
   padding: 3rem 1.5rem;
+  border-top: 1px solid var(--border);
+}
+
+.footer-content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.footer-links a {
+  color: var(--gray-dim);
+  font-size: 0.85rem;
+  transition: color 0.2s;
+}
+
+.footer-links a:hover {
+  color: var(--green);
+  opacity: 1;
+}
+
+footer p {
   color: var(--gray);
   font-size: 0.85rem;
-  border-top: 1px solid #222;
+  margin-bottom: 0.35rem;
+}
+
+.footer-tagline {
+  color: var(--gray-dim);
+  font-size: 0.75rem;
+  font-style: italic;
+}
+
+/* Animations */
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+
+@media (max-width: 600px) {
+  html { font-size: 16px; }
+  .hero { padding: 4rem 1rem 2.5rem; }
+  .hero h1 { font-size: 2.2rem; }
+  .container { padding: 1.5rem 1rem; }
 }

@@ -14,7 +14,7 @@ This is a **documentation, specification, and tooling repository** for the Black
 
 ```
 RoadCode/
-├── README.md                      # Short workspace description
+├── README.md                      # Project overview with CI badges
 ├── BLACKROAD-STORY.md             # Philosophy, values, and mathematical framework
 ├── GREENLIGHT_EMOJI_DICTIONARY.md # Complete emoji-based tracking system (v1.0)
 ├── ARCHITECTURE.md                # System architecture and infrastructure layers
@@ -22,7 +22,9 @@ RoadCode/
 ├── ONBOARDING.md                  # New contributor welcome guide
 ├── CONTRIBUTING.md                # How to contribute
 ├── CLAUDE.md                      # This file — AI assistant guide
-├── Makefile                       # Dev commands (lint, serve, build, clean)
+├── SECURITY.md                    # Security policy and vulnerability reporting
+├── LICENSE                        # MIT License
+├── Makefile                       # Dev commands (lint, serve, build, clean, etc.)
 ├── package.json                   # npm workspace root
 ├── tsconfig.json                  # Shared TypeScript config
 ├── .markdownlint.json             # Markdown linting rules
@@ -48,22 +50,36 @@ RoadCode/
 │       ├── src/cli.ts             # CLI commands (parse, serialize, validate, nats, list)
 │       └── bin/greenlight.js      # Entry point
 ├── .github/
-│   ├── pull_request_template.md   # PR template with GreenLight tags
+│   ├── CODEOWNERS                 # Auto-request reviewers
+│   ├── dependabot.yml             # Automated dependency updates
+│   ├── labeler.yml                # PR auto-label rules (GreenLight)
+│   ├── pull_request_template.md   # PR template with checklist
 │   ├── ISSUE_TEMPLATE/
-│   │   ├── feature-request.md     # ✨ Feature request template
-│   │   ├── bug-report.md          # 🐛 Bug report template
-│   │   └── documentation.md       # 📖 Documentation template
+│   │   ├── feature-request.yml    # ✨ Feature request (YAML form)
+│   │   ├── bug-report.yml         # 🐛 Bug report (YAML form)
+│   │   ├── documentation.yml      # 📖 Documentation (YAML form)
+│   │   └── config.yml             # Quick links (Roadmap, Onboarding)
 │   └── workflows/
-│       ├── lint.yml               # Markdown linting CI
-│       └── deploy-site.yml        # GitHub Pages deployment
+│       ├── ci.yml                 # 🛣️ Unified CI (lint + test + build)
+│       ├── deploy-site.yml        # 🚀 GitHub Pages deployment
+│       ├── release.yml            # 📦 Tag → release + publish
+│       ├── label.yml              # 🏷️ Auto-label PRs
+│       └── stale.yml              # 🧹 Stale issue/PR cleanup
 └── site/                          # Astro static site (roadcode.blackroad.io)
     ├── package.json
     ├── astro.config.mjs
     ├── tsconfig.json
     └── src/
-        ├── layouts/Base.astro     # Base HTML layout
-        ├── pages/index.astro      # Homepage
-        └── styles/global.css      # Global styles (dark theme, green accents)
+        ├── components/Nav.astro   # Sticky nav with mobile hamburger
+        ├── layouts/Base.astro     # Base HTML layout with Nav + footer
+        ├── pages/
+        │   ├── index.astro        # Homepage
+        │   ├── greenlight.astro   # GreenLight emoji dictionary
+        │   ├── architecture.astro # 6-layer system stack
+        │   ├── agents.astro       # Agent roster + protocol
+        │   ├── roadmap.astro      # Interactive project roadmap
+        │   └── docs.astro         # Specs + packages reference
+        └── styles/global.css      # Dark theme, green accents, animations
 ```
 
 ### Tech Stack
@@ -73,7 +89,8 @@ RoadCode/
 - **Testing:** Node.js built-in test runner (`node --test`)
 - **Documentation:** Markdown with markdownlint enforcement
 - **Static Site:** Astro 5 (site/ directory) — deploys to GitHub Pages
-- **CI/CD:** GitHub Actions (lint on PR, deploy on push to main)
+- **CI/CD:** GitHub Actions (unified CI on PR, deploy on push, release on tag)
+- **Dependency Management:** Dependabot (weekly updates for npm + Actions)
 - **Dev Commands:** `make help` to see all available commands
 
 ## Core Philosophy — Know This First
@@ -199,8 +216,12 @@ make clean              # Remove build artifacts
 
 ### CI/CD
 
-- **On PR to main:** Markdown lint runs automatically
-- **On push to main (site/ changes):** Astro site builds and deploys to GitHub Pages
+- **On PR to main (ci.yml):** Unified pipeline — lint docs + build & test all 3 packages (121 tests) + build site. Rollup status check gates merge
+- **On push to main (deploy-site.yml):** Astro site builds and deploys to GitHub Pages
+- **On tag push (release.yml):** Build, test, create GitHub Release, publish packages to GitHub Packages
+- **On PR open (label.yml):** Auto-labels PRs with GreenLight emojis based on changed files
+- **Weekly (stale.yml):** Marks stale issues (30d) and PRs (14d), auto-closes after 7 more days
+- **Weekly (dependabot.yml):** Automated dependency updates for npm and GitHub Actions
 
 ## For AI Assistants
 
