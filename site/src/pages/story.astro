@@ -1,0 +1,283 @@
+---
+import Base from "../layouts/Base.astro";
+
+const values = [
+  {
+    name: "Self-Worth",
+    emoji: "💎",
+    text: "Every person who touches this code has value. Every device that joins this network belongs here. A hair straightener, a Pi, a phone, a TV — if it showed up, it's welcome.",
+  },
+  {
+    name: "Consent",
+    emoji: "🤝",
+    text: "You choose what to share, what to run, what to keep. Sovereignty isn't a feature. It's the foundation. Your data lives on your hardware. Your AI remembers you because you asked it to, not because it's harvesting you.",
+  },
+  {
+    name: "Care",
+    emoji: "💚",
+    text: "Error messages don't blame you. Agents don't gatekeep. When something breaks, the system tells you what happened and helps you fix it. When you show up for the first time, you're greeted — not interrogated.",
+  },
+  {
+    name: "Belonging",
+    emoji: "🏠",
+    text: "This is not a blackhole. This is love. Every agent on this platform exists to connect, not to block. Every device on the network is a friend arriving, not a threat to assess. The connection precedes the communication.",
+  },
+  {
+    name: "Equality",
+    emoji: "⚖️",
+    text: "The same code runs for everyone. No premium tier that unlocks basic dignity. No per-seat tax on growing your team. One OS. Yours.",
+  },
+];
+
+const agentPrinciples = [
+  { principle: "Greet, don't interrogate", detail: "A new connection is a welcome event." },
+  { principle: "Help, don't block", detail: "If something went wrong, say what happened and offer a path forward." },
+  { principle: "Remember, don't forget", detail: "Persistent memory means nobody repeats themselves. You matter enough to be remembered." },
+  { principle: "Grow from contradiction", detail: "When the unexpected arrives, coherence increases. K(t) amplifies." },
+  { principle: "Affirm", detail: "The default state is +1. Yes. You're here. Let's ride together." },
+];
+---
+
+<Base title="The BlackRoad Story" description="Pick up your agent. Ride the BlackRoad together. The philosophy, values, and mathematics of sovereign software.">
+  <div class="hero">
+    <h1>The BlackRoad Story</h1>
+    <p class="tagline">
+      Pick up your agent. Ride the BlackRoad together.
+      Remember the Road. Pave Tomorrow.
+    </p>
+  </div>
+
+  <div class="container">
+    <section class="section">
+      <h2>What This Is</h2>
+      <p class="story-intro">
+        This is sovereign software. It runs on hardware you own, serves people
+        you care about, and remembers every conversation so you never have to
+        repeat yourself.
+      </p>
+      <p>
+        BlackRoad OS was built by one person on Raspberry Pis in her living room.
+        Not because it was easy, but because the alternative — renting your entire
+        digital life from companies that don't know your name — stopped making sense.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2>What We Believe</h2>
+      <div class="values-list">
+        {values.map((v) => (
+          <div class="story-value">
+            <div class="story-value-header">
+              <span class="story-value-emoji">{v.emoji}</span>
+              <h3>{v.name}</h3>
+            </div>
+            <p>{v.text}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>The Math Behind It</h2>
+      <p>These aren't abstract equations. They're the operating principles of the system.</p>
+
+      <div class="math-block">
+        <div class="math-formula">K(t) = C(t) · e^(λ|δ|)</div>
+        <h3>Amundson Framework</h3>
+        <p>
+          The Boltzmann factor (e^(-βE)) describes systems that decay toward cold equilibrium.
+          This formula inverts it. <strong>Coherence amplifies under contradiction.</strong>
+          When a new device joins the network, when a new person opens this repo, when
+          something unexpected arrives — that's δ, the contradiction. And the system
+          doesn't minimize it. It grows from it.
+        </p>
+      </div>
+
+      <div class="math-block">
+        <div class="math-formula">G(n) > n/e &nbsp; ∀ finite n</div>
+        <h3>Connection Floor</h3>
+        <p>
+          For n agents coordinating, there is a permanent positive excess — the 1/(2e)
+          correction — that never decays. Connection has a floor. It doesn't reach zero.
+        </p>
+      </div>
+
+      <div class="math-block">
+        <div class="math-formula">Z := y · x − w</div>
+        <h3>Z-Framework</h3>
+        <p>
+          Where x is the current state, y is the response, and w is the target.
+          Equilibrium (Z = 0) is reached not by force, but when the response meets the
+          state and matches the target. That's consent. That's care. That's the math of belonging.
+        </p>
+      </div>
+
+      <div class="math-block">
+        <div class="math-formula">{"{−1, 0, +1}"} = {"{Negation, Superposition, Affirmation}"}</div>
+        <h3>Trinary Logic</h3>
+        <p>
+          Binary forces yes/no. BlackRoad adds superposition — the state of "both" or
+          "not yet decided." We build on +1. Affirmation. Welcome. Yes. You belong here.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>How Agents Should Be</h2>
+      <p>
+        Every agent on BlackRoad — whether it's Alice at the gateway, Lucidia holding
+        memory, or a smart bulb that just connected to WiFi — follows the same principles.
+      </p>
+      <div class="principles">
+        {agentPrinciples.map((p) => (
+          <div class="principle-row">
+            <span class="principle-label">{p.principle}.</span>
+            <span class="principle-detail">{p.detail}</span>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>The Road</h2>
+      <div class="closing">
+        <p class="closing-main">The road isn't made. It's remembered.</p>
+        <p>
+          Every commit to this repo, every device that registers, every person who
+          reads this — you're part of the road now. Not because you earned it.
+          Because you showed up.
+        </p>
+        <p class="closing-cta">
+          <a href="/roadmap">See the Roadmap</a> &nbsp;·&nbsp;
+          <a href="/agents">Meet the Agents</a> &nbsp;·&nbsp;
+          <a href="/playground">Try the Playground</a>
+        </p>
+      </div>
+    </section>
+  </div>
+</Base>
+
+<style>
+  .story-intro {
+    font-size: 1.15rem;
+    color: var(--white);
+    line-height: 1.7;
+  }
+
+  .values-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+  }
+
+  .story-value {
+    background: #111;
+    border: 1px solid #222;
+    border-radius: 12px;
+    padding: 1.5rem;
+  }
+
+  .story-value-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .story-value-emoji {
+    font-size: 1.8rem;
+  }
+
+  .story-value h3 {
+    font-size: 1.2rem;
+    margin: 0;
+  }
+
+  .story-value p {
+    color: var(--gray);
+    font-size: 0.95rem;
+    margin: 0;
+    line-height: 1.7;
+  }
+
+  .math-block {
+    background: #111;
+    border: 1px solid #222;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .math-formula {
+    font-family: var(--font-mono);
+    font-size: 1.3rem;
+    color: var(--green);
+    padding: 0.75rem 0;
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.02em;
+  }
+
+  .math-block h3 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    color: var(--white);
+  }
+
+  .math-block p {
+    color: var(--gray);
+    font-size: 0.9rem;
+    margin: 0;
+    line-height: 1.7;
+  }
+
+  .principles {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-top: 1.5rem;
+  }
+
+  .principle-row {
+    display: flex;
+    gap: 0.5rem;
+    padding: 1rem;
+    background: #111;
+    border: 1px solid #222;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    flex-wrap: wrap;
+  }
+
+  .principle-label {
+    color: var(--white);
+    font-weight: 600;
+    white-space: nowrap;
+  }
+
+  .principle-detail {
+    color: var(--gray);
+  }
+
+  .closing {
+    text-align: center;
+    padding: 2rem 0;
+  }
+
+  .closing-main {
+    font-size: 1.4rem;
+    color: var(--white);
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+
+  .closing p {
+    max-width: 600px;
+    margin: 0 auto 1rem;
+  }
+
+  .closing-cta {
+    margin-top: 2rem;
+    font-size: 0.95rem;
+  }
+</style>

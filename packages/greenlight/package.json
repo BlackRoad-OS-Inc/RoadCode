@@ -16,8 +16,15 @@
     "test": "node --test dist/tests/parser.test.js dist/tests/state-machine.test.js dist/tests/trinary.test.js dist/tests/nats.test.js",
     "pretest": "tsc"
   },
-  "license": "UNLICENSED",
+  "license": "SEE LICENSE IN LICENSE",
   "author": "BlackRoad OS, Inc.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/BlackRoad-OS-Inc/RoadCode",
+    "directory": "packages/greenlight"
+  },
+  "homepage": "https://roadcode.blackroad.io/greenlight",
+  "keywords": ["greenlight", "emoji", "parser", "blackroad", "trinary", "nats"],
   "devDependencies": {
     "@types/node": "^25.5.0",
     "typescript": "^5.7.0"

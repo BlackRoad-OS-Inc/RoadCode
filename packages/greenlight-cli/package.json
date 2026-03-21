@@ -19,6 +19,13 @@
     "@types/node": "^25.5.0",
     "typescript": "^5.7.0"
   },
-  "license": "UNLICENSED",
-  "author": "BlackRoad OS, Inc."
+  "license": "SEE LICENSE IN LICENSE",
+  "author": "BlackRoad OS, Inc.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/BlackRoad-OS-Inc/RoadCode",
+    "directory": "packages/greenlight-cli"
+  },
+  "homepage": "https://roadcode.blackroad.io/greenlight",
+  "keywords": ["greenlight", "cli", "emoji", "blackroad"]
 }

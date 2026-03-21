@@ -23,6 +23,13 @@
     "@types/node": "^25.5.0",
     "typescript": "^5.7.0"
   },
-  "license": "UNLICENSED",
-  "author": "BlackRoad OS, Inc."
+  "license": "SEE LICENSE IN LICENSE",
+  "author": "BlackRoad OS, Inc.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/BlackRoad-OS-Inc/RoadCode",
+    "directory": "packages/roadchain"
+  },
+  "homepage": "https://roadcode.blackroad.io/docs",
+  "keywords": ["roadchain", "ledger", "ps-sha-infinity", "blackroad", "trinary"]
 }
