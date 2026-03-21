@@ -1,0 +1,243 @@
+---
+import Base from "../layouts/Base.astro";
+
+const categories = [
+  {
+    name: "Lifecycle States",
+    description: "Every entity moves through these phases",
+    emojis: [
+      { emoji: "⬛", code: "void", label: "Pre-existence" },
+      { emoji: "📥", code: "inbox", label: "Captured, untriaged" },
+      { emoji: "📋", code: "queued", label: "Triaged, waiting" },
+      { emoji: "🎯", code: "targeted", label: "Scoped and scheduled" },
+      { emoji: "🚧", code: "wip", label: "In development" },
+      { emoji: "⚡", code: "active", label: "Hot, fast-moving" },
+      { emoji: "🔄", code: "review", label: "Awaiting approval" },
+      { emoji: "⏸️", code: "paused", label: "On hold" },
+      { emoji: "🔒", code: "blocked", label: "Stuck" },
+      { emoji: "🔀", code: "branched", label: "Paraconsistent split" },
+      { emoji: "🩹", code: "healing", label: "Recovering" },
+      { emoji: "✅", code: "done", label: "Complete" },
+      { emoji: "📦", code: "archived", label: "Cold storage" },
+      { emoji: "❌", code: "canceled", label: "Intentionally stopped" },
+      { emoji: "💀", code: "dead", label: "Irrecoverable" },
+    ],
+  },
+  {
+    name: "Scale",
+    description: "Size and scope of the entity",
+    emojis: [
+      { emoji: "👉", code: "micro", label: "Single item" },
+      { emoji: "🎢", code: "macro", label: "Collection / project" },
+      { emoji: "🌐", code: "planetary", label: "System-wide" },
+      { emoji: "🌌", code: "universal", label: "Cross-system" },
+    ],
+  },
+  {
+    name: "Domain",
+    description: "What vertical does this belong to?",
+    emojis: [
+      { emoji: "🛣️", code: "platform", label: "Core BlackRoad OS" },
+      { emoji: "🌀", code: "ai", label: "Agents, ML" },
+      { emoji: "⛓️", code: "chain", label: "Blockchain, ledger" },
+      { emoji: "💎", code: "coin", label: "Tokens, economics" },
+      { emoji: "🧠", code: "intel", label: "Intelligence" },
+      { emoji: "📺", code: "media", label: "Streaming, video" },
+      { emoji: "🎵", code: "audio", label: "Music, sound" },
+      { emoji: "🎮", code: "games", label: "Interactive" },
+      { emoji: "📚", code: "edu", label: "Learning" },
+      { emoji: "🔒", code: "security", label: "Auth, encryption" },
+      { emoji: "🏛️", code: "gov", label: "Governance" },
+      { emoji: "💼", code: "biz", label: "Business" },
+      { emoji: "🔧", code: "infra", label: "Infrastructure" },
+      { emoji: "🎨", code: "creative", label: "Design, art" },
+      { emoji: "📊", code: "data", label: "Analytics" },
+      { emoji: "🌱", code: "growth", label: "Marketing" },
+      { emoji: "🤝", code: "partner", label: "Integrations" },
+      { emoji: "🔬", code: "labs", label: "Research" },
+    ],
+  },
+  {
+    name: "Priority",
+    description: "How urgent is this?",
+    emojis: [
+      { emoji: "🔥", code: "p0", label: "FIRE — Drop everything" },
+      { emoji: "🚨", code: "p1", label: "URGENT — Today" },
+      { emoji: "⭐", code: "p2", label: "HIGH — This week" },
+      { emoji: "📌", code: "p3", label: "MEDIUM — This sprint" },
+      { emoji: "💤", code: "p4", label: "LOW — Someday" },
+      { emoji: "🧊", code: "p5", label: "ICE — Maybe never" },
+    ],
+  },
+  {
+    name: "Ownership",
+    description: "Who is responsible?",
+    emojis: [
+      { emoji: "👤", code: "human", label: "Person" },
+      { emoji: "🤖", code: "agent", label: "AI agent" },
+      { emoji: "⚙️", code: "system", label: "Automated" },
+      { emoji: "👥", code: "team", label: "Group" },
+      { emoji: "🎭", code: "hybrid", label: "Human + Agent" },
+      { emoji: "❓", code: "none", label: "Unassigned" },
+    ],
+  },
+  {
+    name: "Agents",
+    description: "Specific agent identities",
+    emojis: [
+      { emoji: "🌸", code: "cece", label: "Anthropic/Claude" },
+      { emoji: "🔮", code: "lucidia", label: "Recursive AI" },
+      { emoji: "🐇", code: "alice", label: "Edge / Pi mesh" },
+      { emoji: "🎸", code: "silas", label: "xAI/Grok" },
+      { emoji: "🌙", code: "aria", label: "Google/Gemini" },
+      { emoji: "🎩", code: "blackroad", label: "OpenAI/GPT" },
+      { emoji: "🦊", code: "edge", label: "Ollama/Local" },
+      { emoji: "🐙", code: "swarm", label: "Multi-agent" },
+    ],
+  },
+];
+
+const examples = [
+  { emoji: "🚧👉🌀⭐🤖🌸", meaning: "WIP micro AI task, high priority, assigned to Cece" },
+  { emoji: "✅🎢⛓️📌👥", meaning: "Done macro chain project, medium priority, team-owned" },
+  { emoji: "🔒🌐🔧🔥⚙️", meaning: "Blocked planetary infra, fire priority, system-owned" },
+  { emoji: "📥👉🎨💤👤", meaning: "Inbox micro creative task, low priority, human-assigned" },
+  { emoji: "🔀🎢🧠🚨🎭", meaning: "Branched macro intel project, urgent, hybrid human+agent" },
+];
+---
+
+<Base title="GreenLight — Emoji Language" description="The visual language of BlackRoad OS — 20 emoji categories that replace enterprise ticketing.">
+  <div class="hero">
+    <h1>🟢 GreenLight</h1>
+    <p class="tagline">
+      No more Jira. No more Asana. No more Salesforce.
+      GreenLight speaks BlackRoad.
+    </p>
+    <a class="cta" href="/">← Home</a>
+  </div>
+
+  <div class="container">
+    <section class="section">
+      <h2>Composite Notation</h2>
+      <p>
+        Every entity in BlackRoad OS is described by a sequence of emojis.
+        Each emoji maps to a category — lifecycle, scale, domain, priority, ownership, and agent.
+      </p>
+      <div class="examples">
+        {examples.map((ex) => (
+          <div class="example-row">
+            <span class="example-emoji">{ex.emoji}</span>
+            <span class="example-meaning">{ex.meaning}</span>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>NATS Subject Pattern</h2>
+      <div class="math">greenlight.{"{state}"}.{"{scale}"}.{"{domain}"}.{"{id}"}</div>
+      <p>Example: <code>greenlight.wip.micro.ai.01HX7ABC</code></p>
+    </section>
+
+    {categories.map((cat) => (
+      <section class="section">
+        <h2>{cat.name}</h2>
+        <p>{cat.description}</p>
+        <div class="emoji-grid">
+          {cat.emojis.map((e) => (
+            <div class="emoji-card">
+              <span class="emoji-icon">{e.emoji}</span>
+              <span class="emoji-code">{e.code}</span>
+              <span class="emoji-label">{e.label}</span>
+            </div>
+          ))}
+        </div>
+      </section>
+    ))}
+
+    <section class="section">
+      <h2>CLI Tooling</h2>
+      <p>Parse and build GreenLight notation from the command line:</p>
+      <div class="math">
+        $ greenlight parse "🚧👉🌀⭐🤖🌸"<br/>
+        {`{ "lifecycle": "wip", "scale": "micro", "domain": "ai", ... }`}
+      </div>
+      <div class="math">
+        $ greenlight nats "🚧👉🌀" --id 01HX7ABC<br/>
+        greenlight.wip.micro.ai.01HX7ABC
+      </div>
+      <p>
+        Install: <code>npm install @roadcode/greenlight</code> &nbsp;|&nbsp;
+        <a href="https://github.com/BlackRoad-OS-Inc/RoadCode/tree/main/packages/greenlight">View source</a>
+      </p>
+    </section>
+  </div>
+</Base>
+
+<style>
+  .examples {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin: 1.5rem 0;
+  }
+
+  .example-row {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    background: #111;
+    border: 1px solid #222;
+    border-radius: 8px;
+    padding: 1rem 1.25rem;
+  }
+
+  .example-emoji {
+    font-size: 1.3rem;
+    min-width: 140px;
+    font-family: var(--font-mono);
+    letter-spacing: 0.05em;
+  }
+
+  .example-meaning {
+    color: var(--gray);
+    font-size: 0.9rem;
+  }
+
+  .emoji-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+
+  .emoji-card {
+    background: #111;
+    border: 1px solid #222;
+    border-radius: 10px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    transition: border-color 0.2s;
+  }
+
+  .emoji-card:hover {
+    border-color: var(--green);
+  }
+
+  .emoji-icon {
+    font-size: 1.8rem;
+  }
+
+  .emoji-code {
+    font-family: var(--font-mono);
+    color: var(--green);
+    font-size: 0.85rem;
+  }
+
+  .emoji-label {
+    color: var(--gray);
+    font-size: 0.8rem;
+  }
+</style>
