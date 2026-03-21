@@ -1,0 +1,79 @@
+name: "✨ Feature Request"
+description: Suggest an enhancement for the BlackRoad OS ecosystem
+title: "✨ "
+labels: ["feature"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        You showed up. You belong here. Let's build together. 🛣️
+
+  - type: textarea
+    id: what
+    attributes:
+      label: What do you need?
+      description: Describe the feature or capability you'd like to see.
+      placeholder: "I want to be able to..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: why
+    attributes:
+      label: Why does it matter?
+      description: How does this serve sovereignty, consent, care, belonging, or equality?
+      placeholder: "This matters because..."
+    validations:
+      required: true
+
+  - type: dropdown
+    id: domain
+    attributes:
+      label: "Domain"
+      description: "GreenLight domain tag"
+      options:
+        - "🛣️ PLATFORM"
+        - "🌀 AI"
+        - "📚 EDU"
+        - "🔐 SECURITY"
+        - "📡 NETWORK"
+        - "⛓️ CHAIN"
+        - "🖥️ SITE"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: scale
+    attributes:
+      label: "Scale"
+      description: "How big is this?"
+      options:
+        - "👉 MICRO — small tweak"
+        - "🏠 LOCAL — single component"
+        - "🎢 MACRO — cross-cutting"
+        - "🌍 GLOBAL — ecosystem-wide"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: "Priority"
+      description: "How urgent?"
+      options:
+        - "🧊 ICE — whenever"
+        - "📌 MEDIUM — next cycle"
+        - "⭐ HIGH — soon"
+        - "🚨 URGENT — this week"
+        - "🔥 FIRE — right now"
+    validations:
+      required: false
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional context
+      description: Screenshots, links, references, or anything else.
+      placeholder: "Optional — add anything that helps."
+    validations:
+      required: false

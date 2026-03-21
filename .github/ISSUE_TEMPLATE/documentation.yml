@@ -1,0 +1,62 @@
+name: "📖 Documentation"
+description: Improve or add documentation
+title: "📖 "
+labels: ["docs"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Good docs pave the road for everyone. Thanks for helping. 🛣️
+
+  - type: textarea
+    id: what
+    attributes:
+      label: What needs documenting?
+      description: Describe what's missing, unclear, or could be improved.
+      placeholder: "The section about... is unclear because..."
+    validations:
+      required: true
+
+  - type: dropdown
+    id: where
+    attributes:
+      label: "Where should it live?"
+      description: "Which document?"
+      options:
+        - "README.md"
+        - "CLAUDE.md"
+        - "ARCHITECTURE.md"
+        - "ONBOARDING.md"
+        - "CONTRIBUTING.md"
+        - "BLACKROAD-STORY.md"
+        - "GREENLIGHT_EMOJI_DICTIONARY.md"
+        - "docs/API.md"
+        - "docs/DATA-MODEL.md"
+        - "docs/AGENT-PROTOCOL.md"
+        - "docs/PS-SHA-INFINITY.md"
+        - "docs/DEVICE-DISCOVERY.md"
+        - "docs/ROADCHAIN-LEDGER.md"
+        - "New document needed"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: effort
+    attributes:
+      label: "Effort"
+      description: "How much work?"
+      options:
+        - "🫧 TRIVIAL — typo or small fix"
+        - "🥄 SMALL — a paragraph or section"
+        - "🍽️ MEDIUM — a full page rewrite"
+        - "🎪 LARGE — new spec or guide"
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional context
+      description: Anything else that helps.
+    validations:
+      required: false

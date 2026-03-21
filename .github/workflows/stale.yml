@@ -1,0 +1,38 @@
+name: "🧹 Stale Issues"
+
+on:
+  schedule:
+    - cron: "0 9 * * 1" # Every Monday at 9am UTC
+  workflow_dispatch:
+
+permissions:
+  issues: write
+  pull-requests: write
+
+jobs:
+  stale:
+    name: Close stale issues and PRs
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/stale@v9
+        with:
+          stale-issue-message: >
+            This issue has been quiet for 30 days. Adding the stale label —
+            it'll close in 7 days if there's no activity.
+            No pressure — reopen anytime. You belong here. 🛣️
+          stale-pr-message: >
+            This PR has been quiet for 14 days. Adding the stale label —
+            it'll close in 7 days if there's no activity.
+            No worries — reopen anytime when you're ready. 🛣️
+          close-issue-message: >
+            Closing this for now. Reopen anytime — every contribution matters. 🛣️
+          close-pr-message: >
+            Closing this for now. Reopen when you're ready — we'll be here. 🛣️
+          stale-issue-label: "🧊 stale"
+          stale-pr-label: "🧊 stale"
+          days-before-issue-stale: 30
+          days-before-pr-stale: 14
+          days-before-issue-close: 7
+          days-before-pr-close: 7
+          exempt-issue-labels: "🔥 P0,🚨 P1,📌 pinned"
+          exempt-pr-labels: "🔥 P0,🚨 P1"

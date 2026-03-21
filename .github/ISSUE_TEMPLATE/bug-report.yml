@@ -1,0 +1,100 @@
+name: "🐛 Bug Report"
+description: Something isn't working right — let's fix it together
+title: "🐛 "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        No blame here — just tell us what you saw and we'll sort it out. 🛣️
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: Describe what went wrong.
+      placeholder: "I tried to... and then..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect?
+      description: What should have happened instead?
+      placeholder: "I expected..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce
+      description: How can we recreate this?
+      placeholder: |
+        1. Run `make test`
+        2. See error in output
+        3. ...
+    validations:
+      required: true
+
+  - type: dropdown
+    id: domain
+    attributes:
+      label: "Domain"
+      description: "Which area is affected?"
+      options:
+        - "🛣️ PLATFORM"
+        - "🌀 AI / GreenLight"
+        - "⛓️ RoadChain"
+        - "📡 NETWORK"
+        - "🖥️ SITE"
+        - "🔧 INFRA / CI"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: "Priority"
+      description: "How bad is it?"
+      options:
+        - "💛 WARNING — cosmetic or minor"
+        - "💔 BROKEN — feature doesn't work"
+        - "🚨 URGENT — blocking work"
+        - "🔥 FIRE — production down"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: environment
+    attributes:
+      label: "Environment"
+      description: "Where did this happen?"
+      multiple: true
+      options:
+        - "🐧 Linux"
+        - "🍎 macOS"
+        - "🥧 Raspberry Pi"
+        - "🪟 Windows"
+        - "🐳 Docker"
+        - "🌐 GitHub Actions"
+    validations:
+      required: false
+
+  - type: input
+    id: version
+    attributes:
+      label: "Version"
+      description: "Package version or commit SHA, if known"
+      placeholder: "v0.1.0 or abc1234"
+    validations:
+      required: false
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional context
+      description: Logs, screenshots, or anything else that helps.
+    validations:
+      required: false

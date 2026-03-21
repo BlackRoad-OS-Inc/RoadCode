@@ -1,24 +1,34 @@
 ## Summary
 
-<!-- What does this PR do? Keep it short. -->
+<!-- What does this PR do? One sentence. -->
 
 ## GreenLight Tags
 
-<!-- Tag with GreenLight emojis -->
-**State:** <!-- e.g. 🔄 IN REVIEW -->
-**Domain:** <!-- e.g. 🛣️ PLATFORM, 📖 DOCS -->
-**Ownership:** <!-- e.g. 👤 HUMAN, 🤖 AGENT, 🎭 HYBRID -->
+**State:** 🔄 IN REVIEW
+**Domain:** <!-- 🛣️ PLATFORM | 🌀 AI | ⛓️ CHAIN | 📚 EDU | 🖥️ SITE | 🔧 INFRA -->
+**Ownership:** <!-- 👤 HUMAN | 🤖 AGENT | 🎭 HYBRID -->
 
 ## Changes
 
-- <!-- List key changes -->
-
-## Values Check
-
-- [ ] Respects user sovereignty (no vendor lock-in, no data harvesting)
-- [ ] Welcoming and inclusive tone
-- [ ] Uses GreenLight conventions where applicable
+- <!-- Key change 1 -->
+- <!-- Key change 2 -->
 
 ## How to verify
 
-<!-- Steps for reviewers to verify this works -->
+```bash
+make check   # Runs lint + all 121 tests
+```
+
+<!-- Add specific steps if needed -->
+
+## Checklist
+
+- [ ] `make check` passes locally
+- [ ] Follows GreenLight conventions
+- [ ] Respects user sovereignty (no vendor lock-in, no data harvesting)
+- [ ] Tone is welcoming and inclusive
+- [ ] New specs added to CLAUDE.md structure map (if applicable)
+
+## Related issues
+
+<!-- Closes #123 -->

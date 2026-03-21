@@ -1,0 +1,11 @@
+blank_issues_enabled: true
+contact_links:
+  - name: "🛣️ Roadmap"
+    url: https://github.com/BlackRoad-OS-Inc/RoadCode/blob/main/ROADMAP.md
+    about: Check the roadmap to see what's planned and find something to work on.
+  - name: "📖 Onboarding Guide"
+    url: https://github.com/BlackRoad-OS-Inc/RoadCode/blob/main/ONBOARDING.md
+    about: New here? Start with the onboarding guide.
+  - name: "🌐 Website"
+    url: https://roadcode.blackroad.io
+    about: Visit roadcode.blackroad.io for the full picture.
