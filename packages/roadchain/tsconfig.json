@@ -1,0 +1,12 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "outDir": "dist",
+    "rootDir": ".",
+    "composite": true
+  },
+  "references": [
+    { "path": "../greenlight" }
+  ],
+  "include": ["src", "tests"]
+}

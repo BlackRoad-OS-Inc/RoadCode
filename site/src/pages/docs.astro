@@ -1,0 +1,177 @@
+---
+import Base from "../layouts/Base.astro";
+
+const specs = [
+  {
+    emoji: "🌀",
+    title: "GreenLight API",
+    description: "REST + NATS API for managing GreenLight entities. Endpoints for parse, serialize, validate, and CRUD operations.",
+    file: "API.md",
+  },
+  {
+    emoji: "💾",
+    title: "Data Model",
+    description: "PostgreSQL schema, lifecycle state machine, trinary mapping, and query examples for GreenLight entities.",
+    file: "DATA-MODEL.md",
+  },
+  {
+    emoji: "🤖",
+    title: "Agent Protocol",
+    description: "Agent identity, capability declaration, registration, task assignment, and agent-to-agent communication.",
+    file: "AGENT-PROTOCOL.md",
+  },
+  {
+    emoji: "♾️",
+    title: "PS-SHA∞",
+    description: "Paraconsistent hash chains that tolerate contradiction. Trinary truth values, branching, and coherence scoring.",
+    file: "PS-SHA-INFINITY.md",
+  },
+  {
+    emoji: "🐇",
+    title: "Device Discovery",
+    description: "mDNS discovery, mTLS onboarding, certificate issuance, mesh joining, and heartbeat protocol.",
+    file: "DEVICE-DISCOVERY.md",
+  },
+  {
+    emoji: "⛓️",
+    title: "RoadChain Ledger",
+    description: "Append-only ledger format built on PS-SHA∞. Event types, chain types, storage, and NATS integration.",
+    file: "ROADCHAIN-LEDGER.md",
+  },
+];
+
+const packages = [
+  {
+    emoji: "📦",
+    name: "@roadcode/greenlight",
+    description: "Core library — emoji parser, serializer, state machine, trinary logic, NATS validators. 76 tests.",
+    path: "packages/greenlight",
+  },
+  {
+    emoji: "⌨️",
+    name: "@roadcode/greenlight-cli",
+    description: "CLI tool — parse, serialize, validate, nats, and list commands. 16 tests.",
+    path: "packages/greenlight-cli",
+  },
+  {
+    emoji: "⛓️",
+    name: "@roadcode/roadchain",
+    description: "PS-SHA∞ chain implementation — append, branch, merge, verify, coherence tracking. 29 tests.",
+    path: "packages/roadchain",
+  },
+];
+---
+
+<Base title="Documentation — RoadCode" description="Technical specifications, API docs, and package reference for the BlackRoad OS ecosystem.">
+  <div class="hero">
+    <h1>📖 Documentation</h1>
+    <p class="tagline">
+      Specifications, protocols, and packages.
+      Everything you need to build on BlackRoad OS.
+    </p>
+    <a class="cta" href="/">← Home</a>
+  </div>
+
+  <div class="container">
+    <section class="section">
+      <h2>Specifications</h2>
+      <p>Technical protocols and data formats that define how BlackRoad OS works.</p>
+      <div class="doc-grid">
+        {specs.map((spec) => (
+          <a
+            class="doc-card"
+            href={`https://github.com/BlackRoad-OS-Inc/RoadCode/blob/main/docs/${spec.file}`}
+          >
+            <span class="doc-emoji">{spec.emoji}</span>
+            <h3>{spec.title}</h3>
+            <p>{spec.description}</p>
+            <span class="doc-file">docs/{spec.file}</span>
+          </a>
+        ))}
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Packages</h2>
+      <p>TypeScript libraries and CLI tools — installable via npm.</p>
+      <div class="doc-grid">
+        {packages.map((pkg) => (
+          <a
+            class="doc-card"
+            href={`https://github.com/BlackRoad-OS-Inc/RoadCode/tree/main/${pkg.path}`}
+          >
+            <span class="doc-emoji">{pkg.emoji}</span>
+            <h3>{pkg.name}</h3>
+            <p>{pkg.description}</p>
+            <span class="doc-file">{pkg.path}/</span>
+          </a>
+        ))}
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Quick Start</h2>
+      <div class="math">
+        $ npm install<br/>
+        $ npx tsc -b packages/greenlight packages/greenlight-cli packages/roadchain<br/>
+        $ make test<br/>
+        <br/>
+        # 121 tests passing
+      </div>
+      <p>
+        See the <a href="https://github.com/BlackRoad-OS-Inc/RoadCode/blob/main/ONBOARDING.md">Onboarding Guide</a> for the full setup walkthrough.
+      </p>
+    </section>
+  </div>
+</Base>
+
+<style>
+  .doc-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.25rem;
+    margin-top: 1.5rem;
+  }
+
+  .doc-card {
+    background: #111;
+    border: 1px solid #222;
+    border-radius: 12px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    text-decoration: none;
+    color: inherit;
+    transition: border-color 0.2s, transform 0.2s;
+  }
+
+  .doc-card:hover {
+    border-color: var(--green);
+    transform: translateY(-2px);
+    opacity: 1;
+  }
+
+  .doc-emoji {
+    font-size: 2rem;
+  }
+
+  .doc-card h3 {
+    color: var(--white);
+    font-size: 1.1rem;
+    margin: 0;
+  }
+
+  .doc-card p {
+    color: var(--gray);
+    font-size: 0.85rem;
+    margin: 0;
+    flex: 1;
+  }
+
+  .doc-file {
+    font-family: var(--font-mono);
+    color: var(--green-dim);
+    font-size: 0.75rem;
+  }
+</style>

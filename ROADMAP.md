@@ -28,9 +28,9 @@ RoadCode is the canonical specification hub for BlackRoad OS. We're building the
 - ✅ GreenLight API specification (REST + NATS) ([docs/API.md](docs/API.md))
 - ✅ GreenLight data model and lifecycle state machine ([docs/DATA-MODEL.md](docs/DATA-MODEL.md))
 - ✅ Agent identity and capability protocol ([docs/AGENT-PROTOCOL.md](docs/AGENT-PROTOCOL.md))
-- 📋 PS-SHA∞ hash chain specification
-- 📋 Device discovery and mTLS onboarding protocol
-- 📋 RoadChain ledger format specification
+- ✅ PS-SHA∞ hash chain specification ([docs/PS-SHA-INFINITY.md](docs/PS-SHA-INFINITY.md))
+- ✅ Device discovery and mTLS onboarding protocol ([docs/DEVICE-DISCOVERY.md](docs/DEVICE-DISCOVERY.md))
+- ✅ RoadChain ledger format specification ([docs/ROADCHAIN-LEDGER.md](docs/ROADCHAIN-LEDGER.md))
 
 ## Phase 3 — 🔨 IMPLEMENTATION
 
@@ -42,7 +42,7 @@ RoadCode is the canonical specification hub for BlackRoad OS. We're building the
 - ✅ Lifecycle state machine with valid transitions (`@roadcode/greenlight` state-machine module)
 - ✅ Trinary logic and mathematical frameworks (`@roadcode/greenlight` trinary module)
 - 📋 Agent SDK scaffolding (multi-language)
-- 📋 RoadChain client library
+- ✅ RoadChain client library ([packages/roadchain](packages/roadchain))
 - 📋 Pi mesh bootstrapping scripts
 
 ## Phase 4 — 🧪 TESTING

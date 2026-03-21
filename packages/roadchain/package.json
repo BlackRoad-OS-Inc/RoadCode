@@ -1,0 +1,28 @@
+{
+  "name": "@roadcode/roadchain",
+  "version": "0.1.0",
+  "description": "RoadChain client library — PS-SHA∞ append-only ledger for BlackRoad OS",
+  "type": "module",
+  "main": "dist/src/index.js",
+  "types": "dist/src/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/src/index.d.ts",
+      "import": "./dist/src/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "node --test dist/tests/chain.test.js dist/tests/coherence.test.js",
+    "pretest": "tsc"
+  },
+  "dependencies": {
+    "@roadcode/greenlight": "0.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^25.5.0",
+    "typescript": "^5.7.0"
+  },
+  "license": "UNLICENSED",
+  "author": "BlackRoad OS, Inc."
+}

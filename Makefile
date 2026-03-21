@@ -8,7 +8,7 @@ setup: ## First-time setup: install deps and build packages
 	@echo "📦 Installing dependencies..."
 	@npm install
 	@echo "🔨 Building packages..."
-	@npx tsc -b packages/greenlight packages/greenlight-cli
+	@npx tsc -b packages/greenlight packages/greenlight-cli packages/roadchain
 	@echo "✅ Setup complete — run 'make test' to verify"
 
 lint: ## Lint all Markdown files
@@ -19,14 +19,15 @@ lint-fix: ## Lint and auto-fix Markdown files
 	@echo "🔧 Fixing Markdown files..."
 	@npx markdownlint-cli2 --fix "**/*.md" "#node_modules" "#site/node_modules" || true
 
-build-packages: ## Build @roadcode/greenlight and CLI packages
+build-packages: ## Build all @roadcode/* packages
 	@echo "🔨 Building packages..."
-	@npx tsc -b packages/greenlight packages/greenlight-cli
+	@npx tsc -b packages/greenlight packages/greenlight-cli packages/roadchain
 
 test: build-packages ## Run all package tests
 	@echo "🧪 Running tests..."
 	@npm test -w @roadcode/greenlight
 	@npm test -w @roadcode/greenlight-cli
+	@npm test -w @roadcode/roadchain
 
 serve: ## Start local dev server (site/)
 	@echo "🚀 Starting dev server..."
