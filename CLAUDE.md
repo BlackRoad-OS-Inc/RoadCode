@@ -4,7 +4,7 @@
 
 ## Repository Overview
 
-This is a **documentation and specification repository** — not a traditional software project. It defines the foundational language, philosophy, and tracking systems for the BlackRoad OS ecosystem.
+This is a **documentation, specification, and tooling repository** for the BlackRoad OS ecosystem. It defines the foundational language, philosophy, tracking systems, and provides reference implementations of the GreenLight emoji system.
 
 **Owner:** BlackRoad OS, Inc. (© 2026)
 **Canonical URL:** roadcode.blackroad.io
@@ -23,8 +23,24 @@ RoadCode/
 ├── CONTRIBUTING.md                # How to contribute
 ├── CLAUDE.md                      # This file — AI assistant guide
 ├── Makefile                       # Dev commands (lint, serve, build, clean)
+├── package.json                   # npm workspace root
+├── tsconfig.json                  # Shared TypeScript config
 ├── .markdownlint.json             # Markdown linting rules
 ├── .gitignore                     # Git ignore patterns
+├── docs/
+│   ├── API.md                     # GreenLight REST + NATS API specification
+│   └── DATA-MODEL.md              # Database schema, state machine, queries
+├── packages/
+│   ├── greenlight/                # @roadcode/greenlight — core library
+│   │   ├── src/
+│   │   │   ├── index.ts           # Public exports
+│   │   │   ├── types.ts           # Type system, enums, constants
+│   │   │   └── parser.ts          # Parse, serialize, validate, NATS
+│   │   └── tests/
+│   │       └── parser.test.ts     # 19 tests (node:test)
+│   └── greenlight-cli/            # @roadcode/greenlight-cli — CLI tool
+│       ├── src/cli.ts             # CLI commands (parse, serialize, validate, nats, list)
+│       └── bin/greenlight.js      # Entry point
 ├── .github/
 │   ├── pull_request_template.md   # PR template with GreenLight tags
 │   ├── ISSUE_TEMPLATE/
@@ -46,6 +62,9 @@ RoadCode/
 
 ### Tech Stack
 
+- **Runtime:** Node.js 22+, TypeScript 5.7+
+- **Package Manager:** npm workspaces (monorepo)
+- **Testing:** Node.js built-in test runner (`node --test`)
 - **Documentation:** Markdown with markdownlint enforcement
 - **Static Site:** Astro 5 (site/ directory) — deploys to GitHub Pages
 - **CI/CD:** GitHub Actions (lint on PR, deploy on push to main)
@@ -136,6 +155,25 @@ Based on existing history, commits use:
 - **Trinary logic** references where applicable ({−1, 0, +1})
 
 ## Development Workflow
+
+### First-Time Setup
+
+```bash
+npm install                                    # Install all workspace deps
+npx tsc -b packages/greenlight packages/greenlight-cli  # Build packages
+```
+
+### Packages
+
+```bash
+# GreenLight core library
+npm test -w @roadcode/greenlight               # Run 19 tests
+
+# GreenLight CLI
+node packages/greenlight-cli/dist/cli.js parse "🚧👉🌀⭐🤖🌸"
+node packages/greenlight-cli/dist/cli.js list priority
+node packages/greenlight-cli/dist/cli.js nats "🚧👉🌀" --id 01HX7ABC
+```
 
 ### Linting
 

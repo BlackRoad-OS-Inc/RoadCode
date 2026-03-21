@@ -1,0 +1,14 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "outDir": "dist",
+    "rootDir": "src",
+    "paths": {
+      "@roadcode/greenlight": ["../greenlight/src/index.ts"]
+    }
+  },
+  "references": [
+    { "path": "../greenlight" }
+  ],
+  "include": ["src"]
+}

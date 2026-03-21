@@ -1,0 +1,20 @@
+{
+  "name": "roadcode",
+  "private": true,
+  "description": "Canonical RoadCode workspace and automation hub for BlackRoad OS",
+  "workspaces": [
+    "packages/*",
+    "site"
+  ],
+  "scripts": {
+    "build": "npm run build --workspaces --if-present",
+    "test": "npm run test --workspaces --if-present",
+    "lint": "npx markdownlint-cli2 '**/*.md' '#node_modules' '#site/node_modules' '#packages/*/node_modules'",
+    "lint:fix": "npx markdownlint-cli2 --fix '**/*.md' '#node_modules' '#site/node_modules' '#packages/*/node_modules'"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "license": "UNLICENSED",
+  "author": "BlackRoad OS, Inc."
+}

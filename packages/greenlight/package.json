@@ -1,0 +1,25 @@
+{
+  "name": "@roadcode/greenlight",
+  "version": "0.1.0",
+  "description": "GreenLight emoji tracking system — parser, types, and validators for BlackRoad OS",
+  "type": "module",
+  "main": "dist/src/index.js",
+  "types": "dist/src/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/src/index.d.ts",
+      "import": "./dist/src/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "node --test dist/tests/parser.test.js",
+    "pretest": "tsc"
+  },
+  "license": "UNLICENSED",
+  "author": "BlackRoad OS, Inc.",
+  "devDependencies": {
+    "@types/node": "^25.5.0",
+    "typescript": "^5.7.0"
+  }
+}

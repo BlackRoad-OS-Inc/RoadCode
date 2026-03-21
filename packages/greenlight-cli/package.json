@@ -1,0 +1,21 @@
+{
+  "name": "@roadcode/greenlight-cli",
+  "version": "0.1.0",
+  "description": "CLI tool for GreenLight emoji tracking — parse, validate, and format BlackRoad OS entities",
+  "type": "module",
+  "bin": {
+    "greenlight": "./bin/greenlight.js"
+  },
+  "scripts": {
+    "build": "tsc"
+  },
+  "dependencies": {
+    "@roadcode/greenlight": "0.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^25.5.0",
+    "typescript": "^5.7.0"
+  },
+  "license": "UNLICENSED",
+  "author": "BlackRoad OS, Inc."
+}
