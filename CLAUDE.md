@@ -17,10 +17,39 @@ RoadCode/
 ├── README.md                      # Short workspace description
 ├── BLACKROAD-STORY.md             # Philosophy, values, and mathematical framework
 ├── GREENLIGHT_EMOJI_DICTIONARY.md # Complete emoji-based tracking system (v1.0)
-└── CLAUDE.md                      # This file — AI assistant guide
+├── ARCHITECTURE.md                # System architecture and infrastructure layers
+├── ROADMAP.md                     # Project phases and planned work
+├── ONBOARDING.md                  # New contributor welcome guide
+├── CONTRIBUTING.md                # How to contribute
+├── CLAUDE.md                      # This file — AI assistant guide
+├── Makefile                       # Dev commands (lint, serve, build, clean)
+├── .markdownlint.json             # Markdown linting rules
+├── .gitignore                     # Git ignore patterns
+├── .github/
+│   ├── pull_request_template.md   # PR template with GreenLight tags
+│   ├── ISSUE_TEMPLATE/
+│   │   ├── feature-request.md     # ✨ Feature request template
+│   │   ├── bug-report.md          # 🐛 Bug report template
+│   │   └── documentation.md       # 📖 Documentation template
+│   └── workflows/
+│       ├── lint.yml               # Markdown linting CI
+│       └── deploy-site.yml        # GitHub Pages deployment
+└── site/                          # Astro static site (roadcode.blackroad.io)
+    ├── package.json
+    ├── astro.config.mjs
+    ├── tsconfig.json
+    └── src/
+        ├── layouts/Base.astro     # Base HTML layout
+        ├── pages/index.astro      # Homepage
+        └── styles/global.css      # Global styles (dark theme, green accents)
 ```
 
-There is no source code, build system, test framework, CI/CD pipeline, or package manager configured. All content is Markdown documentation.
+### Tech Stack
+
+- **Documentation:** Markdown with markdownlint enforcement
+- **Static Site:** Astro 5 (site/ directory) — deploys to GitHub Pages
+- **CI/CD:** GitHub Actions (lint on PR, deploy on push to main)
+- **Dev Commands:** `make help` to see all available commands
 
 ## Core Philosophy — Know This First
 
@@ -106,6 +135,29 @@ Based on existing history, commits use:
 - **No vendor lock-in** language — sovereign computing philosophy throughout
 - **Trinary logic** references where applicable ({−1, 0, +1})
 
+## Development Workflow
+
+### Linting
+
+```bash
+make lint       # Check all Markdown files
+make lint-fix   # Auto-fix linting issues
+```
+
+### Static Site
+
+```bash
+cd site && npm install  # First time only
+make serve              # Local dev server
+make build              # Production build
+make clean              # Remove build artifacts
+```
+
+### CI/CD
+
+- **On PR to main:** Markdown lint runs automatically
+- **On push to main (site/ changes):** Astro site builds and deploys to GitHub Pages
+
 ## For AI Assistants
 
 When contributing to this repository:
@@ -117,3 +169,6 @@ When contributing to this repository:
 5. **Keep documentation as the primary artifact** — this repo is specification, not code
 6. **Follow the Amundson Framework** — grow from contradiction, don't minimize it
 7. **Default to +1 (Affirmation)** — the system welcomes, it doesn't gatekeep
+8. **Run `make lint`** before committing Markdown changes
+9. **Use issue/PR templates** — they include GreenLight tagging fields
+10. **Check ROADMAP.md** for current project phase and planned work
