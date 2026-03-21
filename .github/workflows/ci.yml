@@ -1,0 +1,89 @@
+name: "🛣️ CI"
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  lint:
+    name: 📖 Lint Docs
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Lint Markdown
+        uses: DavidAnson/markdownlint-cli2-action@v19
+        with:
+          globs: |
+            **/*.md
+            #node_modules
+            #site/node_modules
+            #packages/*/node_modules
+
+  test:
+    name: 🧪 Test Packages
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build all packages
+        run: npx tsc -b packages/greenlight packages/greenlight-cli packages/roadchain
+
+      - name: Test @roadcode/greenlight (76 tests)
+        run: npm test -w @roadcode/greenlight
+
+      - name: Test @roadcode/greenlight-cli (16 tests)
+        run: npm test -w @roadcode/greenlight-cli
+
+      - name: Test @roadcode/roadchain (29 tests)
+        run: npm test -w @roadcode/roadchain
+
+  build-site:
+    name: 🏗️ Build Site
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install root dependencies
+        run: npm ci
+
+      - name: Build site
+        working-directory: site
+        run: npm run build
+
+      - name: Upload site artifact
+        if: github.ref == 'refs/heads/main'
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: site/dist
+
+  status:
+    name: ✅ All Checks
+    needs: [lint, test, build-site]
+    runs-on: ubuntu-latest
+    if: always()
+    steps:
+      - name: Check results
+        run: |
+          if [ "${{ needs.lint.result }}" != "success" ] || \
+             [ "${{ needs.test.result }}" != "success" ] || \
+             [ "${{ needs.build-site.result }}" != "success" ]; then
+            echo "❌ One or more checks failed"
+            exit 1
+          fi
+          echo "✅ All checks passed — ready to merge"

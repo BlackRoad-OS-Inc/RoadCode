@@ -1,0 +1,37 @@
+# Auto-label PRs based on changed files — GreenLight aligned
+
+"📖 docs":
+  - changed-files:
+      - any-glob-to-any-file:
+          - "*.md"
+          - "docs/**"
+
+"🌀 greenlight":
+  - changed-files:
+      - any-glob-to-any-file:
+          - "packages/greenlight/**"
+
+"⌨️ cli":
+  - changed-files:
+      - any-glob-to-any-file:
+          - "packages/greenlight-cli/**"
+
+"⛓️ roadchain":
+  - changed-files:
+      - any-glob-to-any-file:
+          - "packages/roadchain/**"
+
+"🖥️ site":
+  - changed-files:
+      - any-glob-to-any-file:
+          - "site/**"
+
+"🔧 infra":
+  - changed-files:
+      - any-glob-to-any-file:
+          - ".github/**"
+          - "Makefile"
+          - "tsconfig.json"
+          - "package.json"
+          - ".gitignore"
+          - ".markdownlint.json"
