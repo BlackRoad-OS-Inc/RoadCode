@@ -109,3 +109,55 @@
 
 ---
 *BlackRoad OS, Inc. — PROPRIETARY. Everything connected.*
+
+## Vercel (50 Projects)
+- **Team**: Alexa Amundson's projects (`team_TRzkNju2fGETspZKM2AkELHe`)
+- **Key Projects**: blackroad-os-web, blackroad-io, blackroad-site, blackroad-studio, lucidia-earth, blackroad-cloud, prism, operator, core, api, docs, brand, frontend, social, chat-blackroad-io
+- **Packs**: pack-finance, pack-education, pack-creator-studio, pack-legal, pack-research-lab
+- **All 19 domain repos** have `vercel-deploy.yml` workflow
+- **Secrets needed per repo**: `VERCEL_TOKEN`, `VERCEL_ORG_ID` (set), `VERCEL_PROJECT_ID`
+
+## Railway (23 Projects)
+- All 16 orgs have Railway projects
+- **blackroad-api-production** — main API (currently linked)
+- **blackroad-os-orchestrator** — orchestration layer
+- **All 19 domain repos** have `railway-deploy.yml` workflow
+- **Secret**: `RAILWAY_TOKEN` (set on blackroad repo, needs propagation)
+
+## Tailscale
+- Running on: Lucidia (`tailscaled.service`), Gematria (`tailscaled.service`), Anastasia (`tailscaled.service`)
+- MagicDNS was causing DNS cache issues (fixed: killed tailscaled, flushed dscacheutil)
+- WireGuard mesh is primary VPN — Tailscale is supplementary
+
+## DigitalOcean
+- **Gematria** (nyc3) — Edge router, 78GB disk, 68 days uptime
+- **Anastasia** (nyc1) — Cloud edge, 25GB disk, 84 days uptime
+- Total cost: ~$12/month for both droplets
+- Caddy TLS on both (auto Let's Encrypt)
+
+## Full Deploy Pipeline Per Repo
+Every domain repo now has 4 workflows triggered on push to main:
+1. `deploy.yml` → Cloudflare Pages + RoundTrip notification
+2. `pi-sync.yml` → rsync to Gematria + Anastasia (self-hosted runner)
+3. `vercel-deploy.yml` → Vercel production deploy
+4. `railway-deploy.yml` → Railway deploy
+
+## Integration Summary
+| Platform | Projects | Status |
+|----------|----------|--------|
+| Cloudflare Workers | 120 | Live |
+| Cloudflare Pages | 7 | Live |
+| Vercel | 50 | Live |
+| Railway | 23 | Live |
+| GitHub Actions | 70+ workflows | Live |
+| Pi Self-Hosted Runners | 4 nodes | Live |
+| Gitea (Octavia) | 239 repos | Live |
+| Google Drive | 2 accounts | Cron sync |
+| Salesforce | 1 integration | Live |
+| Stripe | RoadPay | Live |
+| HuggingFace | Template ready | Needs token |
+| Tailscale | 3 nodes | Supplementary |
+| DigitalOcean | 2 droplets | Live |
+| WireGuard | 7 nodes | Live |
+| NATS | 4 nodes | Live |
+| Ollama | 5 nodes | Live |
