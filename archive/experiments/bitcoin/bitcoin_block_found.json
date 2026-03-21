@@ -1,0 +1,11 @@
+{
+  "block_hash": "9a98beb50e93689b0fb46cfa7a55f674da0f462ab38b12ea155dc6d0a70a0000",
+  "nonce": 3153866,
+  "merkle_constant": 2.718281828459,
+  "timestamp": 1767481720,
+  "attempts": 935586,
+  "elapsed_seconds": 5.114552974700928,
+  "hashrate": 182926.25076480085,
+  "leading_zeros": 20,
+  "difficulty_bits": 20
+}

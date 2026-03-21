@@ -1,0 +1,1117 @@
+{
+  "total_analyzed": 1000,
+  "patterns_found": [
+    {
+      "nonce": 727771,
+      "block_hash": "95cd82a597a33169...",
+      "constant": "\u03b3 (Euler-Mascheroni)",
+      "correlation": 0.007951424015603004,
+      "leading_zeros": 4
+    },
+    {
+      "nonce": 734771,
+      "block_hash": "bd1bcd422cf42b41...",
+      "constant": "\u221a3",
+      "correlation": 0.006654664096574225,
+      "leading_zeros": 0
+    },
+    {
+      "nonce": 738771,
+      "block_hash": "bdcfa9daa564889a...",
+      "constant": "\u221a3",
+      "correlation": 0.009399135860408747,
+      "leading_zeros": 4
+    },
+    {
+      "nonce": 743771,
+      "block_hash": "b6bc2ab7910cd8c2...",
+      "constant": "e (Euler)",
+      "correlation": 0.004473129980239077,
+      "leading_zeros": 0
+    },
+    {
+      "nonce": 744771,
+      "block_hash": "00d61a4594f39445...",
+      "constant": "\u03b1 (fine-structure)",
+      "correlation": 0.004030405739581406,
+      "leading_zeros": 5
+    },
+    {
+      "nonce": 777772,
+      "block_hash": "943175b67db14265...",
+      "constant": "\u03b3 (Euler-Mascheroni)",
+      "correlation": 0.0016640319959949634,
+      "leading_zeros": 2
+    },
+    {
+      "nonce": 779772,
+      "block_hash": "a320e85610909285...",
+      "constant": "\u221a7",
+      "correlation": 0.008530431497911328,
+      "leading_zeros": 0
+    },
+    {
+      "nonce": 782772,
+      "block_hash": "6816e838db456c3c...",
+      "constant": "\u221a2",
+      "correlation": 0.007614027498095199,
+      "leading_zeros": 0
+    },
+    {
+      "nonce": 854773,
+      "block_hash": "b8767b8f712ec124...",
+      "constant": "e (Euler)",
+      "correlation": 0.0022760734194036125,
+      "leading_zeros": 2
+    },
+    {
+      "nonce": 856774,
+      "block_hash": "9e84779499f44116...",
+      "constant": "\u03c6 (golden ratio)",
+      "correlation": 0.0011747989589339092,
+      "leading_zeros": 0
+    },
+    {
+      "nonce": 874774,
+      "block_hash": "b8743991d290d1d7...",
+      "constant": "e (Euler)",
+      "correlation": 0.002241622488954098,
+      "leading_zeros": 1
+    },
+    {
+      "nonce": 887774,
+      "block_hash": "3c543e7913d2b9e0...",
+      "constant": "\u221a5",
+      "correlation": 0.0004075155392372076,
+      "leading_zeros": 0
+    },
+    {
+      "nonce": 896774,
+      "block_hash": "00ab2e5468a91af9...",
+      "constant": "\u03b1 (fine-structure)",
+      "correlation": 0.004685338124196093,
+      "leading_zeros": 0
+    },
+    {
+      "nonce": 913774,
+      "block_hash": "3e61e61416938c0b...",
+      "constant": "\u221a5",
+      "correlation": 0.007613338785506574,
+      "leading_zeros": 0
+    },
+    {
+      "nonce": 927774,
+      "block_hash": "3dbd1f7cec0e2f3d...",
+      "constant": "\u221a5",
+      "correlation": 0.0050990604634912895,
+      "leading_zeros": 0
+    },
+    {
+      "nonce": 944774,
+      "block_hash": "011d89b232d6c6ca...",
+      "constant": "\u03b1 (fine-structure)",
+      "correlation": 0.0029403903112664867,
+      "leading_zeros": 0
+    },
+    {
+      "nonce": 947774,
+      "block_hash": "24866ad03c19ae33...",
+      "constant": "\u03c0 (pi)",
+      "correlation": 0.0010833907211560134,
+      "leading_zeros": 1
+    },
+    {
+      "nonce": 950774,
+      "block_hash": "b65eb2e7dd1765ec...",
+      "constant": "e (Euler)",
+      "correlation": 0.005899338675394605,
+      "leading_zeros": 0
+    },
+    {
+      "nonce": 956774,
+      "block_hash": "6bd7ac80af40b12b...",
+      "constant": "\u221a2",
+      "correlation": 0.0070461092360525335,
+      "leading_zeros": 2
+    },
+    {
+      "nonce": 960774,
+      "block_hash": "25638d6cefb0aeae...",
+      "constant": "\u03c0 (pi)",
+      "correlation": 0.004457646146807298,
+      "leading_zeros": 7
+    },
+    {
+      "nonce": 962774,
+      "block_hash": "3b89b439c9a535cf...",
+      "constant": "\u221a5",
+      "correlation": 0.0034980311066360736,
+      "leading_zeros": 0
+    },
+    {
+      "nonce": 972774,
+      "block_hash": "b800cbd65c218810...",
+      "constant": "e (Euler)",
+      "correlation": 0.000480321193439992,
+      "leading_zeros": 0
+    },
+    {
+      "nonce": 975775,
+      "block_hash": "69712c3789491a36...",
+      "constant": "\u221a2",
+      "correlation": 0.0023304336740215814,
+      "leading_zeros": 0
+    },
+    {
+      "nonce": 987775,
+      "block_hash": "a461511cbdbccb4d...",
+      "constant": "\u221a7",
+      "correlation": 0.003641373856887564,
+      "leading_zeros": 0
+    },
+    {
+      "nonce": 1004775,
+      "block_hash": "2683fb79f355af23...",
+      "constant": "\u03c0 (pi)",
+      "correlation": 0.008858736937845668,
+      "leading_zeros": 2
+    },
+    {
+      "nonce": 1008775,
+      "block_hash": "a773b736219bb95d...",
+      "constant": "\u221a7",
+      "correlation": 0.008358119931602626,
+      "leading_zeros": 0
+    },
+    {
+      "nonce": 1009775,
+      "block_hash": "b91cbfeb8f572265...",
+      "constant": "e (Euler)",
+      "correlation": 0.004813106967470837,
+      "leading_zeros": 1
+    },
+    {
+      "nonce": 1009775,
+      "block_hash": "b91cbfeb8f572265...",
+      "constant": "\u221a3",
+      "correlation": 0.008955872141529264,
+      "leading_zeros": 1
+    },
+    {
+      "nonce": 1027775,
+      "block_hash": "a093b225da0fa598...",
+      "constant": "\u03c6 (golden ratio)",
+      "correlation": 0.009219671683016739,
+      "leading_zeros": 0
+    },
+    {
+      "nonce": 1029775,
+      "block_hash": "24af3abb73b1784c...",
+      "constant": "\u03c0 (pi)",
+      "correlation": 0.0017061352108872496,
+      "leading_zeros": 0
+    },
+    {
+      "nonce": 1036775,
+      "block_hash": "9ec0548b034d1f4d...",
+      "constant": "\u03c6 (golden ratio)",
+      "correlation": 0.002088237907623025,
+      "leading_zeros": 1
+    },
+    {
+      "nonce": 1042775,
+      "block_hash": "022c10c482a87dfd...",
+      "constant": "\u03b1 (fine-structure)",
+      "correlation": 0.0011875336261999176,
+      "leading_zeros": 2
+    },
+    {
+      "nonce": 1043775,
+      "block_hash": "a03141713a7bc0a7...",
+      "constant": "\u03c6 (golden ratio)",
+      "correlation": 0.0077175925800259115,
+      "leading_zeros": 0
+    },
+    {
+      "nonce": 1066775,
+      "block_hash": "b75ce134b3e53d20...",
+      "constant": "e (Euler)",
+      "correlation": 0.0020208465493678496,
+      "leading_zeros": 1
+    },
+    {
+      "nonce": 1072775,
+      "block_hash": "01ed34f49fa8a1a0...",
+      "constant": "\u03b1 (fine-structure)",
+      "correlation": 0.0002283868847210678,
+      "leading_zeros": 0
+    },
+    {
+      "nonce": 1083775,
+      "block_hash": "3bfe3b5bba582e23...",
+      "constant": "\u221a5",
+      "correlation": 0.0017199570460156022,
+      "leading_zeros": 0
+    },
+    {
+      "nonce": 1087775,
+      "block_hash": "91a74c1b95b114a6...",
+      "constant": "\u03b3 (Euler-Mascheroni)",
+      "correlation": 0.008256660751988276,
+      "leading_zeros": 0
+    },
+    {
+      "nonce": 1089776,
+      "block_hash": "250f9fc10602c8d0...",
+      "constant": "\u03c0 (pi)",
+      "correlation": 0.003177000327237889,
+      "leading_zeros": 0
+    },
+    {
+      "nonce": 1090776,
+      "block_hash": "247ebf1da491c936...",
+      "constant": "\u03c0 (pi)",
+      "correlation": 0.0009663452217908708,
+      "leading_zeros": 7
+    },
+    {
+      "nonce": 1096776,
+      "block_hash": "9e7d77fcb58d192c...",
+      "constant": "\u03c6 (golden ratio)",
+      "correlation": 0.0010680116749827162,
+      "leading_zeros": 0
+    },
+    {
+      "nonce": 1101776,
+      "block_hash": "691592a36d9d40fb...",
+      "constant": "\u221a2",
+      "correlation": 0.003728137473461901,
+      "leading_zeros": 0
+    },
+    {
+      "nonce": 1102776,
+      "block_hash": "b7bcfc0168b0a3e5...",
+      "constant": "e (Euler)",
+      "correlation": 0.0005544054167208046,
+      "leading_zeros": 2
+    },
+    {
+      "nonce": 1116776,
+      "block_hash": "67d79b710cfbf1e3...",
+      "constant": "\u221a2",
+      "correlation": 0.008579907682950694,
+      "leading_zeros": 0
+    },
+    {
+      "nonce": 1118776,
+      "block_hash": "3e70c9898a02644c...",
+      "constant": "\u221a5",
+      "correlation": 0.007840519432916582,
+      "leading_zeros": 1
+    },
+    {
+      "nonce": 1120776,
+      "block_hash": "3b1e54b764baf86f...",
+      "constant": "\u221a5",
+      "correlation": 0.005136414337342576,
+      "leading_zeros": 2
+    },
+    {
+      "nonce": 1128776,
+      "block_hash": "3cbb053d8566e4f7...",
+      "constant": "\u221a5",
+      "correlation": 0.0011607284029087617,
+      "leading_zeros": 0
+    },
+    {
+      "nonce": 1133776,
+      "block_hash": "9e496041e97e3cf8...",
+      "constant": "\u03c6 (golden ratio)",
+      "correlation": 0.00027314024481350785,
+      "leading_zeros": 0
+    },
+    {
+      "nonce": 1134776,
+      "block_hash": "a0aeb3192d122f43...",
+      "constant": "\u03c6 (golden ratio)",
+      "correlation": 0.0096317156410477,
+      "leading_zeros": 0
+    },
+    {
+      "nonce": 1140776,
+      "block_hash": "bb62b403d6de9490...",
+      "constant": "\u221a3",
+      "correlation": 7.596650990071563e-05,
+      "leading_zeros": 1
+    },
+    {
+      "nonce": 1141776,
+      "block_hash": "9c1ce8aca15972ae...",
+      "constant": "\u03c6 (golden ratio)",
+      "correlation": 0.00821787418404507,
+      "leading_zeros": 0
+    },
+    {
+      "nonce": 1152776,
+      "block_hash": "6a241e8f540b1b3e...",
+      "constant": "\u221a2",
+      "correlation": 0.0004000755438122172,
+      "leading_zeros": 0
+    },
+    {
+      "nonce": 1153776,
+      "block_hash": "3c0534c337b24821...",
+      "constant": "\u221a5",
+      "correlation": 0.0016135386595282908,
+      "leading_zeros": 0
+    },
+    {
+      "nonce": 1154776,
+      "block_hash": "9474d1c9087b1a0a...",
+      "constant": "\u03b3 (Euler-Mascheroni)",
+      "correlation": 0.002691858807680747,
+      "leading_zeros": 0
+    },
+    {
+      "nonce": 1159776,
+      "block_hash": "25dec73e4927a195...",
+      "constant": "\u03c0 (pi)",
+      "correlation": 0.006337923409219154,
+      "leading_zeros": 0
+    },
+    {
+      "nonce": 1165776,
+      "block_hash": "baa1c3e6412f0d6e...",
+      "constant": "\u221a3",
+      "correlation": 0.003019966012873798,
+      "leading_zeros": 1
+    },
+    {
+      "nonce": 1187777,
+      "block_hash": "230e963c676b718c...",
+      "constant": "\u03c0 (pi)",
+      "correlation": 0.004651325781510368,
+      "leading_zeros": 0
+    },
+    {
+      "nonce": 1190777,
+      "block_hash": "9be496a401c8a145...",
+      "constant": "\u03c6 (golden ratio)",
+      "correlation": 0.009077255960185937,
+      "leading_zeros": 2
+    },
+    {
+      "nonce": 1217777,
+      "block_hash": "b63fbc27356300b1...",
+      "constant": "e (Euler)",
+      "correlation": 0.00637180994589448,
+      "leading_zeros": 2
+    },
+    {
+      "nonce": 1226778,
+      "block_hash": "3e34c94df4ff4df2...",
+      "constant": "\u221a5",
+      "correlation": 0.006924978216632932,
+      "leading_zeros": 1
+    },
+    {
+      "nonce": 1237778,
+      "block_hash": "3ef4daee211aef3b...",
+      "constant": "\u221a5",
+      "correlation": 0.009855716288613037,
+      "leading_zeros": 0
+    },
+    {
+      "nonce": 1241778,
+      "block_hash": "a77e1c6f18990d07...",
+      "constant": "\u221a7",
+      "correlation": 0.008516741154501739,
+      "leading_zeros": 4
+    },
+    {
+      "nonce": 1245778,
+      "block_hash": "9d9f54f21ffe76e7...",
+      "constant": "\u03c6 (golden ratio)",
+      "correlation": 0.0023215281237872754,
+      "leading_zeros": 0
+    },
+    {
+      "nonce": 1266778,
+      "block_hash": "3a2bac50d7a0c966...",
+      "constant": "\u221a5",
+      "correlation": 0.008839078747847257,
+      "leading_zeros": 0
+    },
+    {
+      "nonce": 1277779,
+      "block_hash": "02f5a2f9c4752a45...",
+      "constant": "\u03b1 (fine-structure)",
+      "correlation": 0.004263264905768038,
+      "leading_zeros": 3
+    },
+    {
+      "nonce": 1282779,
+      "block_hash": "b9916998ff96a754...",
+      "constant": "e (Euler)",
+      "correlation": 0.006593240065478345,
+      "leading_zeros": 0
+    },
+    {
+      "nonce": 1282779,
+      "block_hash": "b9916998ff96a754...",
+      "constant": "\u221a3",
+      "correlation": 0.007175739043521756,
+      "leading_zeros": 0
+    },
+    {
+      "nonce": 1285779,
+      "block_hash": "3d2af84c18c78cb1...",
+      "constant": "\u221a5",
+      "correlation": 0.002868941311194806,
+      "leading_zeros": 1
+    },
+    {
+      "nonce": 1293779,
+      "block_hash": "3b17fdeb7ef0850c...",
+      "constant": "\u221a5",
+      "correlation": 0.005233140544782439,
+      "leading_zeros": 3
+    },
+    {
+      "nonce": 1294779,
+      "block_hash": "b709d7b4f622f895...",
+      "constant": "e (Euler)",
+      "correlation": 0.0032878922254347964,
+      "leading_zeros": 0
+    },
+    {
+      "nonce": 1297779,
+      "block_hash": "bd0e6500c632ae30...",
+      "constant": "\u221a3",
+      "correlation": 0.006450085728257449,
+      "leading_zeros": 4
+    },
+    {
+      "nonce": 1300779,
+      "block_hash": "94b78486c061ba3f...",
+      "constant": "\u03b3 (Euler-Mascheroni)",
+      "correlation": 0.003709592684824292,
+      "leading_zeros": 2
+    },
+    {
+      "nonce": 1301779,
+      "block_hash": "947e7aa06288b046...",
+      "constant": "\u03b3 (Euler-Mascheroni)",
+      "correlation": 0.002839251630056716,
+      "leading_zeros": 0
+    },
+    {
+      "nonce": 1302779,
+      "block_hash": "3b3edac4303865c5...",
+      "constant": "\u221a5",
+      "correlation": 0.00464014308590191,
+      "leading_zeros": 3
+    },
+    {
+      "nonce": 1305779,
+      "block_hash": "b83e2bed4260e3d0...",
+      "constant": "e (Euler)",
+      "correlation": 0.0014168347038339135,
+      "leading_zeros": 2
+    },
+    {
+      "nonce": 1309779,
+      "block_hash": "a0aa53551eb5a429...",
+      "constant": "\u03c6 (golden ratio)",
+      "correlation": 0.009564972395676219,
+      "leading_zeros": 0
+    },
+    {
+      "nonce": 1310779,
+      "block_hash": "26a867df512b2259...",
+      "constant": "\u03c0 (pi)",
+      "correlation": 0.009414514246967737,
+      "leading_zeros": 0
+    },
+    {
+      "nonce": 1311779,
+      "block_hash": "9591e5dd9c27fc2a...",
+      "constant": "\u03b3 (Euler-Mascheroni)",
+      "correlation": 0.0070418105743116355,
+      "leading_zeros": 0
+    },
+    {
+      "nonce": 1332780,
+      "block_hash": "044ee8440a209f7a...",
+      "constant": "\u03b1 (fine-structure)",
+      "correlation": 0.009531677145651946,
+      "leading_zeros": 2
+    },
+    {
+      "nonce": 1336780,
+      "block_hash": "3cef0232b415c13e...",
+      "constant": "\u221a5",
+      "correlation": 0.0019540041015453646,
+      "leading_zeros": 2
+    },
+    {
+      "nonce": 1344780,
+      "block_hash": "013cfce62f4a238b...",
+      "constant": "\u03b1 (fine-structure)",
+      "correlation": 0.0024605012122144764,
+      "leading_zeros": 0
+    },
+    {
+      "nonce": 1350780,
+      "block_hash": "22cfdd9a8a3b1adb...",
+      "constant": "\u03c0 (pi)",
+      "correlation": 0.005608375644927749,
+      "leading_zeros": 0
+    },
+    {
+      "nonce": 1354780,
+      "block_hash": "a7cf1303db5b2b28...",
+      "constant": "\u221a7",
+      "correlation": 0.009752141658183278,
+      "leading_zeros": 3
+    },
+    {
+      "nonce": 1358780,
+      "block_hash": "9f217a803f0ac555...",
+      "constant": "\u03c6 (golden ratio)",
+      "correlation": 0.0035706029163838915,
+      "leading_zeros": 3
+    },
+    {
+      "nonce": 1366780,
+      "block_hash": "67f30ed655129b51...",
+      "constant": "\u221a2",
+      "correlation": 0.00816104226265485,
+      "leading_zeros": 0
+    },
+    {
+      "nonce": 1368780,
+      "block_hash": "225d2e9c6e115a42...",
+      "constant": "\u03c0 (pi)",
+      "correlation": 0.007358307970841332,
+      "leading_zeros": 0
+    },
+    {
+      "nonce": 1369780,
+      "block_hash": "222f0e0b86488d3c...",
+      "constant": "\u03c0 (pi)",
+      "correlation": 0.008062153354768481,
+      "leading_zeros": 0
+    },
+    {
+      "nonce": 1374780,
+      "block_hash": "a4824ccc19c803b4...",
+      "constant": "\u221a7",
+      "correlation": 0.003138091011972932,
+      "leading_zeros": 0
+    },
+    {
+      "nonce": 1375780,
+      "block_hash": "ba4ff53187bbeacf...",
+      "constant": "e (Euler)",
+      "correlation": 0.009500730547058578,
+      "leading_zeros": 3
+    },
+    {
+      "nonce": 1375780,
+      "block_hash": "ba4ff53187bbeacf...",
+      "constant": "\u221a3",
+      "correlation": 0.004268248561941523,
+      "leading_zeros": 3
+    },
+    {
+      "nonce": 1392780,
+      "block_hash": "004c39b12ed7d165...",
+      "constant": "\u03b1 (fine-structure)",
+      "correlation": 0.006134245833375941,
+      "leading_zeros": 1
+    },
+    {
+      "nonce": 1397781,
+      "block_hash": "b6500f11a60a644e...",
+      "constant": "e (Euler)",
+      "correlation": 0.00612272715519413,
+      "leading_zeros": 1
+    },
+    {
+      "nonce": 1400781,
+      "block_hash": "2678374026c62778...",
+      "constant": "\u03c0 (pi)",
+      "correlation": 0.008679194290388659,
+      "leading_zeros": 0
+    },
+    {
+      "nonce": 1407781,
+      "block_hash": "b93b5aa09d3f7b0d...",
+      "constant": "e (Euler)",
+      "correlation": 0.0052800919096366306,
+      "leading_zeros": 1
+    },
+    {
+      "nonce": 1407781,
+      "block_hash": "b93b5aa09d3f7b0d...",
+      "constant": "\u221a3",
+      "correlation": 0.00848888719936347,
+      "leading_zeros": 1
+    },
+    {
+      "nonce": 1410781,
+      "block_hash": "a4225fe435da37bc...",
+      "constant": "\u221a7",
+      "correlation": 0.004601796660256174,
+      "leading_zeros": 0
+    },
+    {
+      "nonce": 1413781,
+      "block_hash": "a6ce0c345cac5b58...",
+      "constant": "\u221a7",
+      "correlation": 0.005830226930091498,
+      "leading_zeros": 0
+    },
+    {
+      "nonce": 1417781,
+      "block_hash": "95ab8a159cfbc44d...",
+      "constant": "\u03b3 (Euler-Mascheroni)",
+      "correlation": 0.007433068501885742,
+      "leading_zeros": 3
+    },
+    {
+      "nonce": 1421781,
+      "block_hash": "9d9da6774d7f0465...",
+      "constant": "\u03c6 (golden ratio)",
+      "correlation": 0.0023471867178258554,
+      "leading_zeros": 0
+    },
+    {
+      "nonce": 1425781,
+      "block_hash": "25eae8a10bfc1a33...",
+      "constant": "\u03c0 (pi)",
+      "correlation": 0.006523018825846633,
+      "leading_zeros": 4
+    },
+    {
+      "nonce": 1433781,
+      "block_hash": "9533e01ba8cfc4d6...",
+      "constant": "\u03b3 (Euler-Mascheroni)",
+      "correlation": 0.005607141221577905,
+      "leading_zeros": 6
+    },
+    {
+      "nonce": 1434781,
+      "block_hash": "2324fb59c0734cce...",
+      "constant": "\u03c0 (pi)",
+      "correlation": 0.004309605519951465,
+      "leading_zeros": 4
+    },
+    {
+      "nonce": 1435781,
+      "block_hash": "93006d001abd4d71...",
+      "constant": "\u03b3 (Euler-Mascheroni)",
+      "correlation": 0.0029904179704000056,
+      "leading_zeros": 2
+    },
+    {
+      "nonce": 1438781,
+      "block_hash": "9fbfd22540cbbd72...",
+      "constant": "\u03c6 (golden ratio)",
+      "correlation": 0.005986715611005611,
+      "leading_zeros": 6
+    },
+    {
+      "nonce": 1442781,
+      "block_hash": "94c59fb9d16547ee...",
+      "constant": "\u03b3 (Euler-Mascheroni)",
+      "correlation": 0.0039248369469451205,
+      "leading_zeros": 0
+    },
+    {
+      "nonce": 1446781,
+      "block_hash": "01466cdc504f15c3...",
+      "constant": "\u03b1 (fine-structure)",
+      "correlation": 0.002316498688712672,
+      "leading_zeros": 1
+    },
+    {
+      "nonce": 1448781,
+      "block_hash": "933dc5737e763161...",
+      "constant": "\u03b3 (Euler-Mascheroni)",
+      "correlation": 0.0020543597626264676,
+      "leading_zeros": 2
+    },
+    {
+      "nonce": 1455781,
+      "block_hash": "a337cc4396c8983b...",
+      "constant": "\u221a7",
+      "correlation": 0.008181152581238416,
+      "leading_zeros": 0
+    },
+    {
+      "nonce": 1461781,
+      "block_hash": "ba1358f57d31174b...",
+      "constant": "e (Euler)",
+      "correlation": 0.00857589089929689,
+      "leading_zeros": 4
+    },
+    {
+      "nonce": 1461781,
+      "block_hash": "ba1358f57d31174b...",
+      "constant": "\u221a3",
+      "correlation": 0.005193088209703212,
+      "leading_zeros": 4
+    },
+    {
+      "nonce": 1462781,
+      "block_hash": "9fcb67dbd9d41554...",
+      "constant": "\u03c6 (golden ratio)",
+      "correlation": 0.006163485897124121,
+      "leading_zeros": 2
+    },
+    {
+      "nonce": 1483781,
+      "block_hash": "b8fdf3116e8d4738...",
+      "constant": "e (Euler)",
+      "correlation": 0.004343133161160417,
+      "leading_zeros": 0
+    },
+    {
+      "nonce": 1483781,
+      "block_hash": "b8fdf3116e8d4738...",
+      "constant": "\u221a3",
+      "correlation": 0.009425845947839684,
+      "leading_zeros": 0
+    },
+    {
+      "nonce": 1489781,
+      "block_hash": "ba171a6343f976f1...",
+      "constant": "e (Euler)",
+      "correlation": 0.008633196522258024,
+      "leading_zeros": 0
+    },
+    {
+      "nonce": 1489781,
+      "block_hash": "ba171a6343f976f1...",
+      "constant": "\u221a3",
+      "correlation": 0.005135782586742077,
+      "leading_zeros": 0
+    },
+    {
+      "nonce": 1490781,
+      "block_hash": "9ca26aca9c28215d...",
+      "constant": "\u03c6 (golden ratio)",
+      "correlation": 0.006180699654715127,
+      "leading_zeros": 0
+    },
+    {
+      "nonce": 1491781,
+      "block_hash": "9bef199c7b356b19...",
+      "constant": "\u03c6 (golden ratio)",
+      "correlation": 0.008916861613305183,
+      "leading_zeros": 1
+    },
+    {
+      "nonce": 1508781,
+      "block_hash": "04235d119ce30451...",
+      "constant": "\u03b1 (fine-structure)",
+      "correlation": 0.008867252429454691,
+      "leading_zeros": 0
+    },
+    {
+      "nonce": 1509781,
+      "block_hash": "a3f154eba83a61f2...",
+      "constant": "\u221a7",
+      "correlation": 0.0053501312415726865,
+      "leading_zeros": 1
+    },
+    {
+      "nonce": 1518782,
+      "block_hash": "9e371f548be0a544...",
+      "constant": "\u03c6 (golden ratio)",
+      "correlation": 5.387921582555855e-06,
+      "leading_zeros": 2
+    },
+    {
+      "nonce": 1527782,
+      "block_hash": "a42fe0f16db57566...",
+      "constant": "\u221a7",
+      "correlation": 0.0043957403256681404,
+      "leading_zeros": 0
+    },
+    {
+      "nonce": 1537782,
+      "block_hash": "a6aba4ed9a222373...",
+      "constant": "\u221a7",
+      "correlation": 0.005305272348476553,
+      "leading_zeros": 1
+    },
+    {
+      "nonce": 1539782,
+      "block_hash": "a70d066f6db7ec91...",
+      "constant": "\u221a7",
+      "correlation": 0.00679118676567092,
+      "leading_zeros": 2
+    },
+    {
+      "nonce": 1549782,
+      "block_hash": "25907f448370bbd1...",
+      "constant": "\u03c0 (pi)",
+      "correlation": 0.005143447777914589,
+      "leading_zeros": 1
+    },
+    {
+      "nonce": 1554782,
+      "block_hash": "67a2954b0067429d...",
+      "constant": "\u221a2",
+      "correlation": 0.00938898999013843,
+      "leading_zeros": 0
+    },
+    {
+      "nonce": 1573782,
+      "block_hash": "3ec48e66a0b923e0...",
+      "constant": "\u221a5",
+      "correlation": 0.009118732911710448,
+      "leading_zeros": 1
+    },
+    {
+      "nonce": 1575782,
+      "block_hash": "bcf287b059098dc5...",
+      "constant": "\u221a3",
+      "correlation": 0.006024907071342067,
+      "leading_zeros": 2
+    },
+    {
+      "nonce": 1577782,
+      "block_hash": "6b9a41ad375c36f7...",
+      "constant": "\u221a2",
+      "correlation": 0.0061089557745864775,
+      "leading_zeros": 2
+    },
+    {
+      "nonce": 1592782,
+      "block_hash": "b7cb54aa0297a714...",
+      "constant": "e (Euler)",
+      "correlation": 0.0003354979055839591,
+      "leading_zeros": 1
+    },
+    {
+      "nonce": 1607782,
+      "block_hash": "02288492c3004fb7...",
+      "constant": "\u03b1 (fine-structure)",
+      "correlation": 0.001133401025731338,
+      "leading_zeros": 3
+    },
+    {
+      "nonce": 1616782,
+      "block_hash": "236a8dc01ad05564...",
+      "constant": "\u03c0 (pi)",
+      "correlation": 0.003248022965591041,
+      "leading_zeros": 0
+    },
+    {
+      "nonce": 1618782,
+      "block_hash": "0394135f0b391ddb...",
+      "constant": "\u03b1 (fine-structure)",
+      "correlation": 0.00668085287811368,
+      "leading_zeros": 0
+    },
+    {
+      "nonce": 1619782,
+      "block_hash": "3d68a6817e839f4e...",
+      "constant": "\u221a5",
+      "correlation": 0.00381011108474949,
+      "leading_zeros": 0
+    },
+    {
+      "nonce": 1622782,
+      "block_hash": "a4368f4a4363bab1...",
+      "constant": "\u221a7",
+      "correlation": 0.004293795699664149,
+      "leading_zeros": 5
+    },
+    {
+      "nonce": 1627782,
+      "block_hash": "9e41fcaa2be1d886...",
+      "constant": "\u03c6 (golden ratio)",
+      "correlation": 0.00016039253166588718,
+      "leading_zeros": 1
+    },
+    {
+      "nonce": 1630783,
+      "block_hash": "b9cf19b5962dada9...",
+      "constant": "e (Euler)",
+      "correlation": 0.007534523271990112,
+      "leading_zeros": 1
+    },
+    {
+      "nonce": 1630783,
+      "block_hash": "b9cf19b5962dada9...",
+      "constant": "\u221a3",
+      "correlation": 0.006234455837009989,
+      "leading_zeros": 1
+    },
+    {
+      "nonce": 1634783,
+      "block_hash": "9608a33a05fecc15...",
+      "constant": "\u03b3 (Euler-Mascheroni)",
+      "correlation": 0.008853634478228511,
+      "leading_zeros": 0
+    },
+    {
+      "nonce": 1636783,
+      "block_hash": "94e7223e8d3e5e93...",
+      "constant": "\u03b3 (Euler-Mascheroni)",
+      "correlation": 0.004436156494320165,
+      "leading_zeros": 0
+    },
+    {
+      "nonce": 1654783,
+      "block_hash": "23af5b998e08abc7...",
+      "constant": "\u03c0 (pi)",
+      "correlation": 0.0021981557281203767,
+      "leading_zeros": 1
+    },
+    {
+      "nonce": 1657783,
+      "block_hash": "b9575b94ced41615...",
+      "constant": "e (Euler)",
+      "correlation": 0.0057073948591569446,
+      "leading_zeros": 0
+    },
+    {
+      "nonce": 1657783,
+      "block_hash": "b9575b94ced41615...",
+      "constant": "\u221a3",
+      "correlation": 0.008061584249843157,
+      "leading_zeros": 0
+    },
+    {
+      "nonce": 1658783,
+      "block_hash": "a47163617fb4fe10...",
+      "constant": "\u221a7",
+      "correlation": 0.003396144339383511,
+      "leading_zeros": 2
+    },
+    {
+      "nonce": 1659783,
+      "block_hash": "a5ec5d0778b61405...",
+      "constant": "\u221a7",
+      "correlation": 0.0023865581263148306,
+      "leading_zeros": 2
+    },
+    {
+      "nonce": 1672783,
+      "block_hash": "92ec70ac4dfe37b2...",
+      "constant": "\u03b3 (Euler-Mascheroni)",
+      "correlation": 0.003295374844230148,
+      "leading_zeros": 0
+    },
+    {
+      "nonce": 1674783,
+      "block_hash": "a5929ff5871e3b19...",
+      "constant": "\u221a7",
+      "correlation": 0.001017256444041048,
+      "leading_zeros": 4
+    },
+    {
+      "nonce": 1687783,
+      "block_hash": "0071711d83dc3591...",
+      "constant": "\u03b1 (fine-structure)",
+      "correlation": 0.005566367159568629,
+      "leading_zeros": 0
+    },
+    {
+      "nonce": 1689783,
+      "block_hash": "6c5ac0d1bb0797b7...",
+      "constant": "\u221a2",
+      "correlation": 0.009046221566128776,
+      "leading_zeros": 1
+    },
+    {
+      "nonce": 1697783,
+      "block_hash": "ba70ae1ea204bc09...",
+      "constant": "\u221a3",
+      "correlation": 0.0037689448525346503,
+      "leading_zeros": 0
+    },
+    {
+      "nonce": 1706784,
+      "block_hash": "0424e758252cf496...",
+      "constant": "\u03b1 (fine-structure)",
+      "correlation": 0.008890753081595213,
+      "leading_zeros": 0
+    },
+    {
+      "nonce": 1708784,
+      "block_hash": "3d741c0c799b8563...",
+      "constant": "\u221a5",
+      "correlation": 0.0039849638668726095,
+      "leading_zeros": 1
+    },
+    {
+      "nonce": 1710784,
+      "block_hash": "a31a9c162cf7627e...",
+      "constant": "\u221a7",
+      "correlation": 0.008626529060619337,
+      "leading_zeros": 1
+    },
+    {
+      "nonce": 1714784,
+      "block_hash": "243f926c66722787...",
+      "constant": "\u03c0 (pi)",
+      "correlation": 2.3776389582730317e-06,
+      "leading_zeros": 0
+    }
+  ],
+  "constant_correlations": {
+    "\u03c6 (golden ratio)": {
+      "mean": 0.26527534828349136,
+      "min": 5.387921582555855e-06,
+      "max": 0.6168708820618705
+    },
+    "e (Euler)": {
+      "mean": 0.299967263949904,
+      "min": 0.0003354979055839591,
+      "max": 0.7171187217718702
+    },
+    "\u03c0 (pi)": {
+      "mean": 0.3751147240552478,
+      "min": 2.3776389582730317e-06,
+      "max": 0.8579662475703664
+    },
+    "\u221a2": {
+      "mean": 0.2585423159503734,
+      "min": 0.0004000755438122172,
+      "max": 0.5853453387863663
+    },
+    "\u221a3": {
+      "mean": 0.30637269748230234,
+      "min": 7.596650990071563e-05,
+      "max": 0.7308877008808703
+    },
+    "\u221a5": {
+      "mean": 0.31689841239164973,
+      "min": 0.0004075155392372076,
+      "max": 0.7634909236603662
+    },
+    "\u221a7": {
+      "mean": 0.27311737342005027,
+      "min": 0.001017256444041048,
+      "max": 0.6445882043768705
+    },
+    "\u03b1 (fine-structure)": {
+      "mean": 0.49080068342776134,
+      "min": 0.0002283868847210678,
+      "max": 0.9922615486388608
+    },
+    "\u03b3 (Euler-Mascheroni)": {
+      "mean": 0.2565893028311792,
+      "min": 0.0016640319959949634,
+      "max": 0.5760525582138704
+    }
+  },
+  "best_leading_zeros": 7
+}
