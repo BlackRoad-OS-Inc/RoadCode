@@ -146,3 +146,71 @@
 - [ ] [RC] Voice Interface — Web Speech API chat with agents
 - [ ] [RC] Notification Center — cross-agent alerts and updates
 - [ ] [RC] Knowledge Graph — visual codex/memory/TIL explorer
+
+## [RC] REACT APPS — BATCH 2 (from templates)
+- [ ] [RC] BackRoad Social Feed — depth-over-engagement with live agent posts from RoundTrip
+- [ ] [RC] BR Router Dashboard — domain/subdomain/agent routing visualization (JSX ready)
+- [ ] [RC] Brand Palette Explorer — interactive 6-stop chromatic swatch tool
+- [ ] [RC] Blog Engine — article listing + single post view
+- [ ] [RC] Contact Page — form with agent routing
+- [ ] [RC] Error Pages — branded 404/500/503 pages
+- [ ] [RC] Portfolio Gallery — project showcase grid
+- [ ] [RC] Team/Leadership Page — founder + agent team bios
+- [ ] [RC] Settings Page — user config, API keys, agent prefs
+- [ ] [RC] Auth/Login Flow — Clerk integration, social login
+- [ ] [RC] Redirect Handler — branded loading screen for domain redirects
+
+## [RC] PRODUCT APPS — Revenue Critical
+- [ ] [RC] RoadWork Homework Portal — parent + student views, assignment tracker
+- [ ] [RC] RoadWork Math Tutor — step-by-step solver with Amundson Framework
+- [ ] [RC] Lucidia Voice Studio — record, edit, publish with Web Speech API
+- [ ] [RC] Lucidia Video Editor — WebCodecs timeline, multi-track, AI assist
+- [ ] [RC] RoadChain Wallet — send/receive RoadCoin, transaction history
+- [ ] [RC] RoadChain Block Explorer — block height, tx details, validator status
+- [ ] [RC] PRISM Fleet Console — real-time SSH into Pis, service restart, logs
+- [ ] [RC] PRISM Agent Orchestrator — spawn/kill/reassign 30K agents
+- [ ] [RC] RoadPay Checkout — embeddable Stripe checkout with plan comparison
+- [ ] [RC] RoadPay Invoice Generator — PDF invoices, payment tracking
+
+## [RC] INFRASTRUCTURE APPS
+- [ ] [RC] Fleet Health Dashboard — live from fleet-audit command, auto-refresh
+- [ ] [RC] Node Detail View — per-Pi deep dive (disk, temp, services, models)
+- [ ] [RC] Ollama Model Manager — deploy/remove models across fleet
+- [ ] [RC] DNS Manager — view/edit Cloudflare + PowerDNS records
+- [ ] [RC] Worker Manager — deploy/rollback CF Workers from UI
+- [ ] [RC] Gitea Mirror Dashboard — sync status Gitea↔GitHub
+- [ ] [RC] Cron Manager — view/edit cron jobs across all Pis
+- [ ] [RC] Log Aggregator UI — tail logs from all 7 nodes in one view
+- [ ] [RC] WireGuard Mesh Visualizer — topology map with latency
+- [ ] [RC] Docker Dashboard — containers across Octavia/Lucidia/Aria
+
+## [RC] DEVELOPER TOOLS
+- [ ] [RC] RoadC Language Docs — interactive spec, grammar, examples
+- [ ] [RC] API Playground — try any BlackRoad API with auth
+- [ ] [RC] Webhook Tester — receive/inspect webhooks
+- [ ] [RC] SDK Generator — auto-generate client SDKs from OpenAPI spec
+- [ ] [RC] MCP Server Browser — browse RoadMCP servers, test tools
+- [ ] [RC] Git Graph — visual commit history across all 254 repos
+
+## [RC] KNOWLEDGE & RESEARCH
+- [ ] [RC] Amundson Paper Viewer — LaTeX render of Paper A + B with interactive graphs
+- [ ] [RC] Equation Explorer — browse all Amundson equations with visualization
+- [ ] [RC] Quantum Experiment Dashboard — bitcoin mining, pattern analysis, trinary logic
+- [ ] [RC] English Grammar Engine — sentence structure parser (Greenbaum model)
+- [ ] [RC] Unified Information Theory — interactive cross-domain pattern explorer
+- [ ] [RC] Three Pillars Viewer — Grammar, Biology, ML Systems side-by-side
+
+## [RC] COMMUNITY & GROWTH
+- [ ] [RC] Product Hunt Launch Page — countdown, features, pricing, CTA
+- [ ] [RC] Investor Portal — live metrics, pitch deck, cap table
+- [ ] [RC] Creator Showcase — gallery of content made with Lucidia
+- [ ] [RC] RoadWork Student Gallery — homework help success stories
+- [ ] [RC] Open Source Contribution Guide — how to contribute to Road Fleet
+- [ ] [RC] Roadie Directory — searchable index of all 30K agents
+
+## [RC] MOBILE & NATIVE
+- [ ] [RC] PWA Manifest — installable on iOS/Android home screens
+- [ ] [RC] Service Worker — offline support, push notifications
+- [ ] [RC] Native Shell (Capacitor) — wrap React apps for App Store
+- [ ] [RC] Watch Complication — fleet status on Apple Watch
+- [ ] [RC] Shortcuts Integration — Siri shortcuts for br commands
