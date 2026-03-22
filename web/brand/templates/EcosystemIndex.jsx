@@ -8,114 +8,204 @@ const ORGS = [
     name: "BlackRoad-OS-Inc",
     url: "https://github.com/BlackRoad-OS-Inc",
     tier: "enterprise",
-    desc: "Enterprise root — data layer, coordination hub. Able to ask everything to anyone.",
-    repos: ["blackroad-operator", "company-docs", "legal", "brand-assets"],
+    count: 94,
+    desc: "Enterprise root — 94 original repos. Data layer, operator, RoadCode, memory, 19 domain repos, 21 papers.",
+    repos: ["blackroad-operator", "RoadCode", "memory", "blackroad", "blackroad-agents", "amundson-research", "Company", "Root"],
+    domain: "blackroad.io",
   },
   {
     name: "BlackRoad-OS",
     url: "https://github.com/BlackRoad-OS",
     tier: "core",
-    desc: "Core operating system. Coordinates all other organizations.",
-    repos: ["blackroad-os-web", "blackroad-os-api-gateway", "blackroad-os-auth", "blackroad-os-agents", "blackroad-os-memory", "blackroad-os-prism-console", "blackroad-os-docs", "blackroad-os-demo", "blackroad-os-beacon"],
+    count: 126,
+    desc: "Core platform — 126 original repos. Web, API, agents, docs, Prism, research.",
+    repos: ["blackroad-os-web", "blackroad-os-research", "RoadCode", "lucidia-agents", "blackroad-os-landing-worker"],
+    domain: "blackroad.io",
   },
   {
     name: "BlackRoad-AI",
     url: "https://github.com/BlackRoad-AI",
     tier: "product",
-    desc: "AI models, agent frameworks, inference pipelines, Lucidia core.",
-    repos: ["lucidia-core", "agent-mesh", "inference-gateway", "ps-sha-infinity"],
+    count: 19,
+    desc: "AI models, inference, Lucidia core — 19 repos. Meridian orchestrator, Black Mode IDE.",
+    repos: ["meridian", "black-mode", "RoadCode", "operator", "source"],
+    domain: "blackroadai.com",
   },
   {
     name: "BlackRoad-Studio",
     url: "https://github.com/BlackRoad-Studio",
     tier: "product",
-    desc: "Creator tools, Unity agent homes, rendering, design studio.",
-    repos: ["blackroad-os-studio", "blackroad-unity-homes", "blackroad-os-creator", "blackroad-os-gallery"],
+    count: 9,
+    desc: "Creator tools — canvas, video, writing studio. 9 repos.",
+    repos: ["RoadCode", "operator", "source", "templates"],
+    domain: "lucidia.studio",
   },
   {
     name: "BlackRoad-Education",
     url: "https://github.com/BlackRoad-Education",
     tier: "product",
-    desc: "RoadWork, tutoring, curriculum tools, homework flows.",
-    repos: ["blackroad-os-pack-education", "roadwork-v0", "math-road"],
+    count: 9,
+    desc: "RoadWork tutoring, code challenges, accessibility-first learning. 9 repos.",
+    repos: ["code-challenge", "roadwork", "RoadCode", "operator"],
+    domain: null,
   },
   {
     name: "BlackRoad-Media",
     url: "https://github.com/BlackRoad-Media",
     tier: "product",
-    desc: "RoadView, RoadTube, SoundRoad — video, audio, search pipelines.",
-    repos: ["roadview", "roadtube", "soundroad", "cadence-engine"],
+    count: 8,
+    desc: "Content, streaming, social platform, media distribution. 8 repos.",
+    repos: ["RoadCode", "operator", "source"],
+    domain: "blackroad.me",
   },
   {
     name: "BlackRoad-Interactive",
     url: "https://github.com/BlackRoad-Interactive",
     tier: "product",
-    desc: "Genesis Road, RoadWorld — game engine, virtual environments.",
-    repos: ["genesis-road", "roadworld", "physics-sandbox"],
+    count: 6,
+    desc: "Game engine, 3D worlds, physics sandbox. 6 repos.",
+    repos: ["game-engine", "RoadCode", "operator", "source"],
+    domain: null,
   },
   {
     name: "BlackRoad-Cloud",
     url: "https://github.com/BlackRoad-Cloud",
     tier: "infra",
-    desc: "Infrastructure, K3s clusters, Cloudflare Workers, edge compute.",
-    repos: ["blackroad-os-infra", "cloudflare-workers", "k3s-config", "edge-runtime"],
+    count: 7,
+    desc: "RoadSync, Terraform modules, K8s operators. 7 repos.",
+    repos: ["roadsync", "blackroad-terraform-modules", "k8s-operators", "RoadCode"],
+    domain: "blackroad.network",
   },
   {
     name: "BlackRoad-Security",
     url: "https://github.com/BlackRoad-Security",
     tier: "infra",
-    desc: "Auth, encryption, PS-SHA∞ identity, certificates, zero-trust.",
-    repos: ["blackroad-os-auth", "identity-protocol", "cert-manager"],
+    count: 7,
+    desc: "Roadblock zero-trust, auth, encryption, compliance. 7 repos.",
+    repos: ["roadblock", "RoadCode", "operator", "source"],
+    domain: "roadchain.io",
   },
   {
     name: "BlackRoad-Gov",
     url: "https://github.com/BlackRoad-Gov",
     tier: "infra",
-    desc: "Cece governance engine — policies, ledger, intents, delegations.",
-    repos: ["cece-core", "policy-engine", "ledger-service", "intent-service"],
+    count: 8,
+    desc: "Cece governance — policies, ledger, delegations. 8 repos.",
+    repos: ["RoadCode", "operator", "source"],
+    domain: "roadcoin.io",
   },
   {
     name: "BlackRoad-Hardware",
     url: "https://github.com/BlackRoad-Hardware",
     tier: "infra",
-    desc: "Pi mesh fleet, Jetson nodes, edge devices, NATS messaging.",
-    repos: ["pi-mesh", "edge-agent", "nats-config", "device-registry"],
+    count: 11,
+    desc: "Hailo Vision (52 TOPS), Pi fleet, edge devices, sensors. 11 repos.",
+    repos: ["hailo-vision", "RoadCode", "operator", "source"],
+    domain: "blackroad.systems",
   },
   {
     name: "BlackRoad-Labs",
     url: "https://github.com/BlackRoad-Labs",
     tier: "research",
-    desc: "Research, quantum computing, experimental frameworks.",
-    repos: ["z-framework", "pauli-model", "spiral-geometry", "contradiction-engine"],
+    count: 8,
+    desc: "RoadFlow workflows, Radius digital sandbox, quantum research. 8 repos.",
+    repos: ["roadflow", "radius", "RoadCode", "operator"],
+    domain: "blackroadquantum.com",
   },
   {
     name: "BlackRoad-Foundation",
     url: "https://github.com/BlackRoad-Foundation",
     tier: "research",
-    desc: "Open source projects, community tools, grants, education.",
-    repos: ["open-source", "community-tools", "grants"],
+    count: 6,
+    desc: "Open source, community tools, grants. 6 repos.",
+    repos: ["RoadCode", "operator", "source"],
+    domain: "blackroad.company",
   },
   {
     name: "BlackRoad-Ventures",
     url: "https://github.com/BlackRoad-Ventures",
     tier: "corporate",
-    desc: "Investments, partnerships, ecosystem development.",
-    repos: ["partnerships", "ecosystem-map"],
+    count: 7,
+    desc: "Investments, partnerships, ecosystem development. 7 repos.",
+    repos: ["RoadCode", "operator", "source"],
+    domain: null,
   },
   {
     name: "BlackRoad-Archive",
     url: "https://github.com/BlackRoad-Archive",
     tier: "corporate",
-    desc: "Historical documents, conversation archives, legacy code.",
-    repos: ["archive-2024", "conversation-logs", "legacy-proofs"],
+    count: 8,
+    desc: "Historical documents, conversation archives, backup systems. 8 repos.",
+    repos: ["RoadCode", "operator", "source"],
+    domain: null,
   },
   {
     name: "Blackbox-Enterprises",
     url: "https://github.com/Blackbox-Enterprises",
     tier: "corporate",
-    desc: "Developer brand — blackboxprogramming.io, public APIs.",
-    repos: ["blackbox-site", "public-api", "dev-tools"],
+    count: 11,
+    desc: "Sovereign automation — Airbyte, ActivePieces, Huginn, Prefect, Temporal forks. 11 repos.",
+    repos: ["blackbox-airbyte", "blackbox-activepieces", "blackbox-huginn", "blackbox-prefect", "blackbox-temporal"],
+    domain: "blackboxprogramming.io",
   },
+];
+
+const FLEET = [
+  { name: "Alice", ip: "192.168.4.49", role: "Gateway", emoji: "🌐", color: "#00D4FF", services: ["Pi-hole", "PostgreSQL", "Qdrant", "Redis", "nginx"], status: "online" },
+  { name: "Cecilia", ip: "192.168.4.96", role: "AI Engine", emoji: "🧠", color: "#9C27B0", services: ["Ollama (16 models)", "Hailo-8 (26 TOPS)", "MinIO", "InfluxDB"], status: "online" },
+  { name: "Octavia", ip: "192.168.4.101", role: "Architect", emoji: "🐙", color: "#FF6B2B", services: ["Gitea (239 repos)", "Docker", "NATS", "15 Workers"], status: "online" },
+  { name: "Aria", ip: "192.168.4.98", role: "Interface", emoji: "🎵", color: "#E91E63", services: ["Dashboards", "Monitoring", "UIs"], status: "offline" },
+  { name: "Lucidia", ip: "192.168.4.38", role: "Dreamer", emoji: "💡", color: "#FFC107", services: ["334 web apps", "PowerDNS", "Ollama", "GH Runners"], status: "online" },
+  { name: "Gematria", ip: "nyc3", role: "Edge Router", emoji: "🔷", color: "#4488FF", services: ["Caddy TLS (151 domains)", "Ollama (6 models)", "PowerDNS"], status: "online" },
+  { name: "Anastasia", ip: "nyc1", role: "Cloud Edge", emoji: "☁️", color: "#00D4FF", services: ["Caddy", "Domain hosting", "Failover"], status: "online" },
+];
+
+const PRODUCTS = [
+  { name: "Lucidia", tier: "core", status: "building", price: "$20/mo", desc: "AI companion with infinite memory", domain: "lucidiaqi.com" },
+  { name: "RoadWork", tier: "education", status: "building", price: "$9.99/mo", desc: "Accessibility-first education", domain: "roadwork.blackroad.io" },
+  { name: "RoadChain", tier: "blockchain", status: "building", price: "—", desc: "Verification, not speculation", domain: "roadchain.io" },
+  { name: "RoadPay", tier: "payments", status: "live", price: "2.5% + $0.30", desc: "Sovereign payment processing", domain: "roadpay.blackroad.io" },
+  { name: "Canvas Studio", tier: "creator", status: "building", price: "$29/mo", desc: "Design without design school", domain: "lucidia.studio" },
+  { name: "Video Studio", tier: "creator", status: "building", price: "$29/mo", desc: "Browser-native 4K editing", domain: "lucidia.studio" },
+  { name: "Writing Studio", tier: "creator", status: "building", price: "$19/mo", desc: "Words that ship", domain: "lucidia.studio" },
+  { name: "RoadTube", tier: "media", status: "planned", price: "90%+ rev share", desc: "Where STEM creators thrive", domain: "roadtube.blackroad.io" },
+  { name: "BackRoad", tier: "social", status: "building", price: "Free", desc: "Social without the algorithm", domain: "backroad.blackroad.io" },
+  { name: "RoundTrip", tier: "core", status: "live", price: "Free", desc: "Agent communication hub", domain: "roundtrip.blackroad.io" },
+  { name: "RoadCoin", tier: "finance", status: "building", price: "0.5% tx fee", desc: "Utility, not speculation", domain: "roadcoin.io" },
+  { name: "Prism Console", tier: "enterprise", status: "live", price: "$99/mo", desc: "Enterprise dashboard", domain: "prism.blackroad.io" },
+  { name: "Black Mode", tier: "ai", status: "planned", price: "$29/mo", desc: "Sovereign AI IDE", domain: "blackroadai.com" },
+  { name: "Radius", tier: "research", status: "planned", price: "$49/mo", desc: "Digital sandbox for physics", domain: "blackroadquantum.com" },
+  { name: "Hailo Vision", tier: "hardware", status: "building", price: "—", desc: "Edge AI at 52 TOPS", domain: "blackroad.systems" },
+];
+
+const AGENT_OS_LAYERS = [
+  { layer: "LLM Gateway", repos: "TensorZero + LiteLLM", fn: "Sub-ms model routing for 30K agents", color: COLORS[0] },
+  { layer: "Agent Runtime", repos: "Mastra (TS) + Rig (Rust/WASM)", fn: "Browser-native agent execution", color: COLORS[1] },
+  { layer: "Agent Memory", repos: "Mem0 + Letta (.af format)", fn: "Per-agent and shared memory", color: COLORS[2] },
+  { layer: "Event Mesh", repos: "Solace patterns + Ractor", fn: "Decoupled, priority channels", color: COLORS[3] },
+  { layer: "Sandboxing", repos: "workerd / rquickjs + Extism", fn: "Isolation for 30K concurrent agents", color: COLORS[4] },
+  { layer: "Component Model", repos: "jco + wasm_component_layer", fn: "Cross-language agent interfaces (WIT)", color: COLORS[5] },
+  { layer: "Storage", repos: "sql.js + opfs-tools", fn: "Persistent browser-native state", color: COLORS[0] },
+  { layer: "P2P Mesh", repos: "Rings Network", fn: "Decentralized agent routing", color: COLORS[1] },
+  { layer: "Scheduling", repos: "Tokio + Crossbeam primitives", fn: "Work-stealing agent scheduler", color: COLORS[2] },
+  { layer: "Security", repos: "seL4 capability + Tock capsule", fn: "Agent permissions and isolation", color: COLORS[3] },
+  { layer: "Build System", repos: "Moon + Turborepo + mise", fn: "Polyglot monorepo orchestration", color: COLORS[4] },
+  { layer: "Dev Portal", repos: "Backstage + Ratatui dashboards", fn: "Mission control and observability", color: COLORS[5] },
+];
+
+const SOVEREIGNTY_STACK = [
+  { service: "Git", self: "Gitea · Octavia", replaces: "GitHub", repos: "239" },
+  { service: "AI Inference", self: "Ollama · 4 nodes", replaces: "OpenAI / Anthropic", repos: "52 TOPS" },
+  { service: "Workers", self: "workerd · Octavia :9001-9015", replaces: "CF Workers", repos: "15" },
+  { service: "Object Storage", self: "MinIO · Cecilia", replaces: "CF R2 / S3", repos: "4 buckets" },
+  { service: "DNS", self: "PowerDNS · Lucidia + Gematria", replaces: "Cloudflare DNS", repos: "151 records" },
+  { service: "PaaS", self: "Deploy API · Octavia :3500", replaces: "Railway / Heroku", repos: "—" },
+  { service: "Database", self: "PostgreSQL · 3 nodes", replaces: "CF D1 / Supabase", repos: "—" },
+  { service: "Cache", self: "Redis · Alice", replaces: "CF KV", repos: "—" },
+  { service: "TLS Edge", self: "Caddy · Gematria", replaces: "CF proxy", repos: "151 domains" },
+  { service: "VPN", self: "WireGuard mesh", replaces: "Tailscale", repos: "12/12" },
+  { service: "Chat", self: "RoundTrip (D1) + chat.blackroad.io", replaces: "Slack", repos: "69 agents" },
+  { service: "CI/CD", self: "Gitea Actions + act_runner", replaces: "GitHub Actions", repos: "—" },
 ];
 
 const DOMAINS = [
@@ -168,6 +258,9 @@ function Nav() {
       <div style={{ display: "flex", alignItems: "center", gap: 16 }}>
         <a href="#orgs" style={{ fontFamily: "'Inter', sans-serif", fontSize: 13, color: "#737373", textDecoration: "none" }}>Orgs</a>
         <a href="#domains" style={{ fontFamily: "'Inter', sans-serif", fontSize: 13, color: "#737373", textDecoration: "none" }}>Domains</a>
+        <a href="#fleet" style={{ fontFamily: "'Inter', sans-serif", fontSize: 13, color: "#737373", textDecoration: "none" }}>Fleet</a>
+        <a href="#products" style={{ fontFamily: "'Inter', sans-serif", fontSize: 13, color: "#737373", textDecoration: "none" }}>Products</a>
+        <a href="#agent-os" style={{ fontFamily: "'Inter', sans-serif", fontSize: 13, color: "#737373", textDecoration: "none" }}>Agent OS</a>
         <a href="#map" style={{ fontFamily: "'Inter', sans-serif", fontSize: 13, color: "#737373", textDecoration: "none" }}>Map</a>
       </div>
     </nav>
@@ -197,9 +290,11 @@ function HeroSection() {
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(120px, 1fr))", gap: 1, background: "#1a1a1a", borderRadius: 12, overflow: "hidden" }}>
           {[
             { v: "16", l: "GitHub Orgs" },
-            { v: "20", l: "Domains" },
-            { v: "150+", l: "Subdomains" },
-            { v: "4", l: "Layers" },
+            { v: "354", l: "Original Repos" },
+            { v: "19", l: "Live Domains" },
+            { v: "400+", l: "DNS Records" },
+            { v: "7", l: "Nodes" },
+            { v: "52", l: "TOPS" },
           ].map((s) => (
             <div key={s.l} style={{ background: "#131313", padding: "18px 16px", textAlign: "center" }}>
               <div style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 26, fontWeight: 700, color: "#f5f5f5" }}>{s.v}</div>
@@ -488,6 +583,207 @@ function ArchMapSection() {
   );
 }
 
+function FleetSection() {
+  return (
+    <section id="fleet" style={{ padding: "48px 20px" }}>
+      <div style={{ maxWidth: 720, margin: "0 auto" }}>
+        <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, color: "#525252", textTransform: "uppercase", letterSpacing: "0.15em", marginBottom: 12 }}>
+          Infrastructure
+        </div>
+        <h2 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: "clamp(24px, 5vw, 36px)", fontWeight: 700, color: "#f5f5f5", letterSpacing: "-0.02em", marginBottom: 8 }}>
+          7 nodes. One mesh.
+        </h2>
+        <p style={{ fontFamily: "'Inter', sans-serif", fontSize: 14, color: "#525252", marginBottom: 24 }}>
+          5 Raspberry Pis + 2 DigitalOcean droplets. 52 TOPS. WireGuard mesh 12/12. $136/month.
+        </p>
+
+        <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
+          {FLEET.map((node) => (
+            <div key={node.name} style={{ background: "#131313", border: "1px solid #1a1a1a", borderRadius: 10, padding: "16px 20px" }}>
+              <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 10 }}>
+                <span style={{ fontSize: 20 }}>{node.emoji}</span>
+                <div style={{ flex: 1 }}>
+                  <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+                    <span style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 16, fontWeight: 600, color: "#f5f5f5" }}>{node.name}</span>
+                    <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 10, color: "#404040" }}>{node.ip}</span>
+                  </div>
+                  <div style={{ fontFamily: "'Inter', sans-serif", fontSize: 12, color: "#525252" }}>{node.role}</div>
+                </div>
+                <div style={{ display: "flex", alignItems: "center", gap: 5 }}>
+                  <div style={{ width: 6, height: 6, borderRadius: "50%", background: node.status === "online" ? "#22c55e" : "#ef4444" }} />
+                  <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 10, color: node.status === "online" ? "#22c55e" : "#ef4444" }}>{node.status}</span>
+                </div>
+              </div>
+              <div style={{ display: "flex", flexWrap: "wrap", gap: 4 }}>
+                {node.services.map((s) => (
+                  <span key={s} style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 10, color: "#525252", background: "#0a0a0a", padding: "3px 8px", borderRadius: 3, border: "1px solid #151515" }}>{s}</span>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function SovereigntySection() {
+  return (
+    <section id="sovereignty" style={{ padding: "48px 20px" }}>
+      <div style={{ maxWidth: 720, margin: "0 auto" }}>
+        <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, color: "#525252", textTransform: "uppercase", letterSpacing: "0.15em", marginBottom: 12 }}>
+          Sovereignty Stack
+        </div>
+        <h2 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: "clamp(24px, 5vw, 36px)", fontWeight: 700, color: "#f5f5f5", letterSpacing: "-0.02em", marginBottom: 8 }}>
+          Self-hosted everything.
+        </h2>
+        <p style={{ fontFamily: "'Inter', sans-serif", fontSize: 14, color: "#525252", marginBottom: 24 }}>
+          $925 one-time hardware vs $2,220–8,400/yr cloud. Break-even: 6.2 months.
+        </p>
+
+        <div style={{ background: "#131313", border: "1px solid #1a1a1a", borderRadius: 10, overflow: "hidden" }}>
+          <div style={{ display: "grid", gridTemplateColumns: "1fr 2fr 1.5fr 80px", gap: 0, padding: "10px 18px", borderBottom: "1px solid #1a1a1a" }}>
+            {["Service", "Self-Hosted", "Replaces", "Scale"].map((h) => (
+              <span key={h} style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 9, color: "#333", textTransform: "uppercase", letterSpacing: "0.06em" }}>{h}</span>
+            ))}
+          </div>
+          {SOVEREIGNTY_STACK.map((row, i) => (
+            <div key={row.service} style={{ display: "grid", gridTemplateColumns: "1fr 2fr 1.5fr 80px", gap: 0, padding: "10px 18px", borderBottom: i < SOVEREIGNTY_STACK.length - 1 ? "1px solid #141414" : "none" }}>
+              <span style={{ fontFamily: "'Inter', sans-serif", fontSize: 13, color: "#d4d4d4", fontWeight: 500 }}>{row.service}</span>
+              <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, color: "#737373" }}>{row.self}</span>
+              <span style={{ fontFamily: "'Inter', sans-serif", fontSize: 12, color: "#404040", textDecoration: "line-through" }}>{row.replaces}</span>
+              <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 10, color: "#525252", textAlign: "right" }}>{row.repos}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function ProductsSection() {
+  const [filter, setFilter] = useState("all");
+  const tiers = ["all", "core", "creator", "education", "ai", "finance", "media", "social", "enterprise", "research", "hardware", "blockchain", "payments"];
+  const filtered = filter === "all" ? PRODUCTS : PRODUCTS.filter((p) => p.tier === filter);
+  const statusColor = { live: "#22c55e", building: "#f59e0b", planned: "#525252" };
+
+  return (
+    <section id="products" style={{ padding: "48px 20px" }}>
+      <div style={{ maxWidth: 720, margin: "0 auto" }}>
+        <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, color: "#525252", textTransform: "uppercase", letterSpacing: "0.15em", marginBottom: 12 }}>
+          Products
+        </div>
+        <h2 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: "clamp(24px, 5vw, 36px)", fontWeight: 700, color: "#f5f5f5", letterSpacing: "-0.02em", marginBottom: 24 }}>
+          92 products. 15 shown.
+        </h2>
+
+        <div style={{ display: "flex", gap: 4, flexWrap: "wrap", marginBottom: 16 }}>
+          {tiers.filter((t) => t === "all" || PRODUCTS.some((p) => p.tier === t)).map((t) => (
+            <button key={t} onClick={() => setFilter(t)} style={{
+              fontFamily: "'JetBrains Mono', monospace", fontSize: 10, fontWeight: 500,
+              textTransform: "uppercase", letterSpacing: "0.06em",
+              color: filter === t ? "#f5f5f5" : "#404040",
+              background: filter === t ? "#1a1a1a" : "transparent",
+              border: "1px solid #1a1a1a", borderRadius: 5,
+              padding: "5px 12px", cursor: "pointer",
+            }}>
+              {t}
+            </button>
+          ))}
+        </div>
+
+        <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
+          {filtered.map((p) => (
+            <div key={p.name} style={{ background: "#131313", border: "1px solid #1a1a1a", borderRadius: 10, padding: "14px 18px", display: "flex", alignItems: "center", gap: 14, flexWrap: "wrap" }}>
+              <div style={{ width: 6, height: 6, borderRadius: "50%", background: statusColor[p.status], flexShrink: 0 }} />
+              <div style={{ flex: "1 1 160px", minWidth: 0 }}>
+                <div style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 15, fontWeight: 600, color: "#f5f5f5" }}>{p.name}</div>
+                <div style={{ fontFamily: "'Inter', sans-serif", fontSize: 12, color: "#525252" }}>{p.desc}</div>
+              </div>
+              <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, color: "#737373", flexShrink: 0 }}>{p.price}</span>
+              <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 9, color: "#333", textTransform: "uppercase", letterSpacing: "0.06em", background: "#0a0a0a", padding: "3px 8px", borderRadius: 3, border: "1px solid #151515", flexShrink: 0 }}>{p.status}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function AgentOSSection() {
+  return (
+    <section id="agent-os" style={{ padding: "48px 20px" }}>
+      <div style={{ maxWidth: 720, margin: "0 auto" }}>
+        <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, color: "#525252", textTransform: "uppercase", letterSpacing: "0.15em", marginBottom: 12 }}>
+          Agent OS
+        </div>
+        <h2 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: "clamp(24px, 5vw, 36px)", fontWeight: 700, color: "#f5f5f5", letterSpacing: "-0.02em", marginBottom: 8 }}>
+          30K agents in a browser.
+        </h2>
+        <p style={{ fontFamily: "'Inter', sans-serif", fontSize: 14, color: "#525252", marginBottom: 24 }}>
+          rquickjs at 210KB per interpreter makes it physically possible. 30K agents = 6.3GB. Actor/event-mesh is the convergence.
+        </p>
+
+        <div style={{ display: "flex", flexDirection: "column", gap: 1, background: "#1a1a1a", borderRadius: 10, overflow: "hidden" }}>
+          {AGENT_OS_LAYERS.map((l) => (
+            <div key={l.layer} style={{ background: "#131313", padding: "14px 18px", display: "flex", alignItems: "center", gap: 14 }}>
+              <div style={{ width: 4, height: 28, borderRadius: 2, background: l.color, flexShrink: 0 }} />
+              <div style={{ flex: "1 1 120px", minWidth: 0 }}>
+                <div style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 14, fontWeight: 600, color: "#f5f5f5" }}>{l.layer}</div>
+                <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 10, color: "#525252", marginTop: 2 }}>{l.repos}</div>
+              </div>
+              <div style={{ fontFamily: "'Inter', sans-serif", fontSize: 12, color: "#404040", flex: "1 1 200px" }}>{l.fn}</div>
+            </div>
+          ))}
+        </div>
+
+        <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, color: "#333", textAlign: "center", marginTop: 16 }}>
+          12 layers · workerd + Lunatic + Solace Agent Mesh
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function AmundsonSection() {
+  return (
+    <section id="math" style={{ padding: "48px 20px" }}>
+      <div style={{ maxWidth: 720, margin: "0 auto" }}>
+        <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, color: "#525252", textTransform: "uppercase", letterSpacing: "0.15em", marginBottom: 12 }}>
+          Mathematics
+        </div>
+        <h2 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: "clamp(24px, 5vw, 36px)", fontWeight: 700, color: "#f5f5f5", letterSpacing: "-0.02em", marginBottom: 24 }}>
+          The Amundson Framework
+        </h2>
+
+        <div style={{ background: "#131313", border: "1px solid #1a1a1a", borderRadius: 10, padding: "32px 24px", textAlign: "center" }}>
+          <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: "clamp(18px, 4vw, 28px)", color: "#f5f5f5", marginBottom: 16 }}>
+            G(n) = n<sup style={{ fontSize: "0.7em" }}>(n+1)</sup> / (n+1)<sup style={{ fontSize: "0.7em" }}>n</sup>
+          </div>
+          <div style={{ display: "flex", justifyContent: "center", gap: 32, flexWrap: "wrap", marginBottom: 16 }}>
+            <div>
+              <div style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 28, fontWeight: 700, color: "#f5f5f5" }}>1.24433</div>
+              <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 10, color: "#404040", textTransform: "uppercase" }}>A_G constant</div>
+            </div>
+            <div>
+              <div style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 28, fontWeight: 700, color: "#f5f5f5" }}>536/536</div>
+              <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 10, color: "#404040", textTransform: "uppercase" }}>Tests passed</div>
+            </div>
+            <div>
+              <div style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 28, fontWeight: 700, color: "#f5f5f5" }}>4 Pis</div>
+              <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 10, color: "#404040", textTransform: "uppercase" }}>Verified on</div>
+            </div>
+          </div>
+          <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 12, color: "#525252", lineHeight: 1.8 }}>
+            n / (1 + 1/n)<sup>n</sup> → n/e + 1/(2e) + O(1/n)<br />
+            <span style={{ color: "#404040" }}>The 1/(2e) is the irreducible gap.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function Footer() {
   return (
     <footer style={{ padding: "40px 20px 48px" }}>
@@ -502,7 +798,7 @@ function Footer() {
               <span style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 13, fontWeight: 600, color: "#a3a3a3" }}>BlackRoad OS, Inc.</span>
             </div>
             <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 10, color: "#333" }}>
-              16 orgs · 20 domains · Intelligent turtles all the way down
+              16 orgs · 20 domains · 92 products · 69 agents · 52 TOPS
             </div>
           </div>
           <div style={{ display: "flex", gap: 20 }}>
@@ -537,7 +833,19 @@ export default function EcosystemIndex() {
         <HeroSection />
         <GradientBar />
         <OrgsSection />
+        <GradientBar />
         <DomainsSection />
+        <GradientBar />
+        <FleetSection />
+        <GradientBar />
+        <SovereigntySection />
+        <GradientBar />
+        <ProductsSection />
+        <GradientBar />
+        <AgentOSSection />
+        <GradientBar />
+        <AmundsonSection />
+        <GradientBar />
         <ArchMapSection />
         <Footer />
       </div>
