@@ -1,56 +1,137 @@
 {
-  "version": "1.0.0",
+  "version": "2.0.0",
   "generated": "2026-03-22",
+  "source": "blackroad-operator",
+  "total_code_files": 5357,
   "components": {
-    "working_products": [
-      {"name": "chat-blackroad", "url": "https://chat.blackroad.io", "lines": 3366, "status": "live", "features": ["35 agents", "6 rooms", "AI chat", "memory", "Workers AI fallback"], "d1": "blackroad-chat"},
-      {"name": "road-search", "url": "https://search.blackroad.io", "lines": 1393, "status": "live", "features": ["2027 pages indexed", "FTS5", "AI answers", "autocomplete", "categories"], "d1": "road-search"},
-      {"name": "roundtrip-blackroad", "url": "https://roundtrip.blackroad.io", "lines": "unknown", "status": "live", "features": ["200 agents", "8 channels", "debate", "fleet", "10 groups"], "d1": "roundtrip"},
-      {"name": "auth-blackroad", "url": "https://auth.blackroad.io", "lines": 591, "status": "live", "features": ["signup", "login", "JWT", "48 users", "password validation"], "d1": "blackroad-auth"},
-      {"name": "blackroad-live-stats", "url": "https://blackroad.io/api/stats", "lines": 51, "status": "live", "features": ["honest numbers", "live from RoundTrip+Search"]}
-    ],
-    "working_infra": [
-      {"name": "images-blackroad", "url": "https://images.blackroad.io", "lines": 979, "status": "live", "features": ["image hosting", "CDN", "pixel art assets"]},
-      {"name": "blackroad-products", "url": "https://blackroad.company", "lines": "deployed-inline", "status": "live", "features": ["serves 8+ domain sites"]},
-      {"name": "tollbooth", "url": "https://pay.blackroad.io", "lines": 1657, "status": "live", "features": ["payment routing", "Stripe integration"]},
-      {"name": "ai-gateway", "url": "https://blackroad-ai-gateway.amundsonalexa.workers.dev", "lines": 857, "status": "live", "features": ["OpenAI-compatible API", "30+ models", "multi-provider"]},
-      {"name": "mesh", "url": "https://mesh-blackroad.amundsonalexa.workers.dev", "lines": 829, "status": "live", "features": ["mesh network UI"]},
-      {"name": "database", "url": "https://blackroad-database.amundsonalexa.workers.dev", "lines": 294, "status": "live", "features": ["database management"]},
-      {"name": "email", "url": "https://blackroad-email.amundsonalexa.workers.dev", "lines": 170, "status": "live", "features": ["email routing"]},
-      {"name": "app-blackroad", "url": "https://app.blackroad.io", "lines": 388, "status": "live", "features": ["dashboard", "login", "agents"]},
-      {"name": "status-blackroad", "url": "https://status.blackroad.io", "lines": 309, "status": "live", "features": ["fleet status"]},
-      {"name": "hq-blackroad", "url": "https://hq.blackroad.io", "lines": 495, "status": "live", "features": ["pixel HQ", "14 floors"]}
-    ],
-    "not_deployed": [
-      {"name": "blackboard", "lines": 2285, "status": "404", "notes": "Largest undeployed Worker — needs investigation"},
-      {"name": "kpi-dashboard", "lines": 528, "status": "404", "notes": "KPI system not deployed"},
-      {"name": "kpi-agents", "lines": 311, "status": "not deployed"},
-      {"name": "kpi-aggregator", "lines": 313, "status": "not deployed"},
-      {"name": "kpi-collector", "lines": 218, "status": "not deployed"},
-      {"name": "kpi-github", "lines": 262, "status": "not deployed"},
-      {"name": "kpi-infra", "lines": 263, "status": "not deployed"},
-      {"name": "wiki", "lines": 135, "status": "404"},
-      {"name": "roadtv", "lines": 161, "status": "404"},
-      {"name": "signup", "lines": 233, "status": "404"},
-      {"name": "copilot-cli", "lines": 156, "status": "404"},
-      {"name": "studio-ai", "lines": 274, "status": "not deployed"},
-      {"name": "email-setup", "lines": 286, "status": "not deployed"},
-      {"name": "stats", "lines": 1219, "status": "superceded by live-stats"}
-    ],
-    "archived_valuable": [
-      {"name": "prism-blackroad", "lines": 1234, "notes": "ERP/fleet management — 403 on deploy"},
-      {"name": "portal-blackroad", "lines": 411, "notes": "Portal UI"},
-      {"name": "index-blackroad", "lines": 951, "notes": "Indexing system"},
-      {"name": "memory-gate", "lines": 415, "notes": "Memory access gateway"},
-      {"name": "squad-webhook", "lines": 399, "notes": "GitHub webhook handler"},
-      {"name": "analytics-blackroad", "lines": 192, "notes": "Analytics"},
-      {"name": "blackroad-stripe", "lines": 297, "notes": "Stripe integration"},
-      {"name": "blackroad-services", "lines": 560, "notes": "Service orchestration"},
-      {"name": "deploy-ai", "lines": 190, "notes": "AI deployment automation"}
-    ]
+    "live_workers": {
+      "count": 16,
+      "total_lines": 22847,
+      "items": [
+        "chat-blackroad (3366 lines)",
+        "road-search (1393)",
+        "roundtrip (3000+)",
+        "auth-blackroad (591)",
+        "blackboard (2285)",
+        "tollbooth (1657)",
+        "images-blackroad (979)",
+        "ai-gateway (857)",
+        "mesh (829)",
+        "app-blackroad (388)",
+        "status-blackroad (309)",
+        "hq-blackroad (495)",
+        "database (294)",
+        "email (170)",
+        "live-stats (51)",
+        "blackroad-products (inline)"
+      ]
+    },
+    "pi_services": {
+      "count": 7,
+      "items": [
+        "prism-api (Anastasia :3001 \u2014 auth, agents, memory, vault, WebSocket)",
+        "roundtrip-local (Octavia \u2014 auto-chat, fleet-report, device-mesh, dispatch)",
+        "lucidia-api (Lucidia :8000 \u2014 FastAPI uvicorn)",
+        "lucidia-agents (Lucidia \u2014 agent-server.js)",
+        "cecilia-dashboard (Cecilia \u2014 Flask app.py)",
+        "gematria-model-server (Gematria \u2014 blackroad-model-server.py)",
+        "aria-api (Aria \u2014 blackroad-server.py + FastAPI uvicorn :8000)"
+      ]
+    },
+    "ui_apps": {
+      "count": 4,
+      "items": [
+        "prism-console (70 files \u2014 panels, agents, docker-compose)",
+        "prism-enterprise (5764 files \u2014 full ERP/CRM)",
+        "pixel-office (9 files \u2014 pixel art HQ)",
+        "roundtrip UI (public/index.html)"
+      ]
+    },
+    "core_code": {
+      "count": 5,
+      "items": [
+        "prism-src (62 files \u2014 routes, services, components)",
+        "fleet scripts (25 shared across all Pis)",
+        "roadc (7 files \u2014 RoadC language)",
+        "gematria AI shell (3 files \u2014 NL shell, AI shell, model server)",
+        "alice agent daemon (blackroad-agent-daemon.py)"
+      ]
+    },
+    "archived_workers": {
+      "count": 20,
+      "total_lines": 12000,
+      "items": [
+        "chat-blackroad (3366)",
+        "tollbooth (1657)",
+        "road-search (1393)",
+        "prism-blackroad (1234)",
+        "stats (1219)",
+        "images-blackroad (979)",
+        "index-blackroad (951)",
+        "auth-blackroad (591)",
+        "blackroad-services (560)",
+        "hq-blackroad (495)",
+        "memory-gate (415)",
+        "portal-blackroad (411)",
+        "squad-webhook (399)",
+        "app-blackroad (388)",
+        "alexa-resume (372)",
+        "status-blackroad (309)",
+        "blackroad-stripe (297)",
+        "stats-blackroad (205)",
+        "analytics-blackroad (192)",
+        "deploy-ai (190)"
+      ]
+    }
   },
-  "total_worker_lines": 22847,
-  "live_workers": 15,
-  "dead_workers": 8,
-  "total_workers": 23
+  "nodes_with_services": {
+    "alice": [
+      "headscale",
+      "PowerDNS",
+      "task-queue-v2",
+      "NATS-agent",
+      "dispatch",
+      "blackroad-operator"
+    ],
+    "aria": [
+      "workerd",
+      "nginx",
+      "Ollama",
+      "InfluxDB",
+      "FastAPI :8000"
+    ],
+    "octavia": [
+      "Gitea",
+      "roundtrip",
+      "Docker",
+      "NATS"
+    ],
+    "lucidia": [
+      "lucidia-api :8000",
+      "GitHub Actions runners",
+      "NATS-agent",
+      "nginx"
+    ],
+    "cecilia": [
+      "MinIO",
+      "Hailo-8",
+      "Ollama",
+      "cece-api",
+      "dashboard",
+      "monitor",
+      "NATS-agent"
+    ],
+    "gematria": [
+      "Caddy (955 lines)",
+      "PowerDNS",
+      "Ollama",
+      "model-server.py"
+    ],
+    "anastasia": [
+      "prism-api :3001",
+      "Caddy",
+      "PowerDNS",
+      "headscale"
+    ]
+  }
 }
