@@ -113,3 +113,36 @@
 - [ ] [RC] Email capture + drip campaign
 - [ ] [RC] Social media launch (LinkedIn, Twitter/X, Reddit)
 - [ ] [RC] Product Hunt launch kit
+
+## [RC] REACT APPS — COMPLETED
+- [x] [RC] Main Landing Page (blackroad.io/index.html) — 15KB ✅
+- [x] [RC] Ecosystem Index (ecosystem-app/) — 16 orgs, 20 domains, architecture map ✅
+- [x] [RC] Onboarding Flow (onboarding-app/) — role picker, interests, agent matching ✅
+- [x] [RC] Changelog (changelog-app/) — release notes with version filtering ✅
+- [x] [RC] Agent Profile (agent-profile-app/) — Lucidia, Cecilia, CeCe, Alice, Meridian, Eve ✅
+- [x] [RC] RoadView Search (roadview-search-app/) — sovereign AI search with quality scoring ✅
+- [x] [RC] BR Router JSX Dashboard — domain/subdomain/agent routing visualization ✅
+- [x] [RC] Brand Palette — 6 chromatic stops with tap-to-copy ✅
+- [x] [RC] Color Test — full palette test component ✅
+
+## [RC] REACT APPS — BUILD NEXT
+- [ ] [RC] RoadWork Tutor — homework help UI with FSRS spaced repetition
+- [ ] [RC] Lucidia Studio — video/audio/design editor interface
+- [ ] [RC] RoadChain Explorer — block browser, transaction viewer, wallet
+- [ ] [RC] RoadCoin Wallet — creator payments, tips, balance, send/receive
+- [ ] [RC] PRISM Console — fleet management dashboard with real-time data
+- [ ] [RC] RoadPay Billing — subscription management, invoices, usage
+- [ ] [RC] Fleet Dashboard — live Pi node status with SSH actions
+- [ ] [RC] Memory Explorer — browse 1,648 journal entries, codex, TILs
+- [ ] [RC] Agent Chat — multi-agent conversation UI (RoundTrip frontend)
+- [ ] [RC] RoadC Playground — in-browser REPL for RoadC language
+- [ ] [RC] Quantum Lab — interactive Amundson Framework visualizer
+- [ ] [RC] API Explorer — interactive API docs with try-it-now
+- [ ] [RC] Settings Dashboard — user preferences, API keys, agent config
+- [ ] [RC] Admin Panel — org management, user roles, billing admin
+- [ ] [RC] Analytics Dashboard — privacy-first metrics visualization
+- [ ] [RC] Investor Deck — interactive pitch with live fleet data
+- [ ] [RC] Mobile Shell — PWA wrapper for all apps
+- [ ] [RC] Voice Interface — Web Speech API chat with agents
+- [ ] [RC] Notification Center — cross-agent alerts and updates
+- [ ] [RC] Knowledge Graph — visual codex/memory/TIL explorer
