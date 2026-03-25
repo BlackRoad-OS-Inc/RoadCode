@@ -1,7 +1,7 @@
 # Stripe Integration — BlackRoad OS
 
-> Account: `acct_1S70Zn3e5FMFdlFw` | Display: **BlackRoad**
-> Dashboard: https://dashboard.stripe.com/acct_1S70Zn3e5FMFdlFw/apikeys
+> Account: *(stored in secrets manager)* | Display: **BlackRoad**
+> Dashboard: *(access via Stripe dashboard — do not store URLs with account IDs in source)*
 
 ## Core Plans — Payment Links (LIVE)
 
@@ -22,34 +22,36 @@
 ## All Stripe Products (18 total)
 
 ### Core Plans (NEW)
-| Product | ID | Price/mo |
-|---------|-----|---------|
-| Rider Plan | prod_UBwNBW5pQzO7CF | $29 |
-| Paver Plan | prod_UBwNsYA5u8DBMR | $99 |
-| Enterprise Plan | prod_UBwNXTiGk2STvJ | $299 |
+| Product | Price/mo |
+|---------|---------|
+| Rider Plan | $29 |
+| Paver Plan | $99 |
+| Enterprise Plan | $299 |
 
 ### Vertical Products (NEW)
-| Product | ID | Price/mo |
-|---------|-----|---------|
-| Lucidia Creator | prod_UBwN75PBFesOya | $29 |
-| RoadWork Tutoring | prod_UBwNl5jAGpgZcM | $19 |
-| RoadCoin Payments | prod_UBwNWRI1xMQCd7 | TBD |
-| BlackBox Dev Tools | prod_UBwNubbP8nUN0d | TBD |
-| RoadSearch | prod_UBwNZpx7sYZXsk | $5 |
+| Product | Price/mo |
+|---------|---------|
+| Lucidia Creator | $29 |
+| RoadWork Tutoring | $19 |
+| RoadCoin Payments | TBD |
+| BlackBox Dev Tools | TBD |
+| RoadSearch | $5 |
 
 ### Org Products (EXISTING)
-| Product | ID | Price/mo | Price/yr |
-|---------|-----|---------|---------|
-| RoadChain Blockchain | prod_UBw8N2aCsZx5rj | $99 | $990 |
-| Archive Vault | prod_UBw8HsLIGLeFLE | $15 | $150 |
-| Labs Sandbox | prod_UBw8QILFiVXR6V | $29 | $290 |
-| Ventures Toolkit | prod_UBw8lEVWLYqRl5 | $49 | $490 |
-| Foundation Research | prod_UBw8M4N23MJ1ys | $9 | $90 |
-| Gov Compliance | prod_UBw8yDw6vIzFhg | — | — |
-| Media RoadCast | prod_UBw88UbcaEuTRG | — | — |
-| Interactive RoadWorld | prod_UBw8Z6hw2vNpcz | — | — |
-| Security RoadGuard | prod_UBw8tpyszftJqp | — | — |
-| Cloud RoadHost | prod_UBw71r8M7E0Sft | — | — |
+| Product | Price/mo | Price/yr |
+|---------|---------|---------|
+| RoadChain Blockchain | $99 | $990 |
+| Archive Vault | $15 | $150 |
+| Labs Sandbox | $29 | $290 |
+| Ventures Toolkit | $49 | $490 |
+| Foundation Research | $9 | $90 |
+| Gov Compliance | — | — |
+| Media RoadCast | — | — |
+| Interactive RoadWorld | — | — |
+| Security RoadGuard | — | — |
+| Cloud RoadHost | — | — |
+
+> **Note:** Product IDs are stored in the secrets manager. Do not commit Stripe IDs to source control.
 
 ## Integration Points
 - **blackroad-stripe** CF Worker — webhook handler

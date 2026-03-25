@@ -36,11 +36,11 @@ async def chat(req: AgentRequest):
 @router.get("/fleet/nodes")
 async def fleet_nodes():
     return {"nodes": [
-        {"name": "alice", "ip": "192.168.4.49", "status": "online"},
-        {"name": "cecilia", "ip": "192.168.4.96", "status": "online"},
-        {"name": "octavia", "ip": "192.168.4.101", "status": "online"},
-        {"name": "aria", "ip": "192.168.4.98", "status": "online"},
-        {"name": "lucidia", "ip": "192.168.4.38", "status": "online"},
+        {"name": "alice", "status": "online"},
+        {"name": "cecilia", "status": "online"},
+        {"name": "octavia", "status": "online"},
+        {"name": "aria", "status": "online"},
+        {"name": "lucidia", "status": "online"},
     ]}
 
 @router.post("/deploy")

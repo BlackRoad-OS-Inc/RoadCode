@@ -59,7 +59,7 @@ export default {
 
     // CORS — validate origin
     const origin = request.headers.get('Origin') || '';
-    const corsOrigin = (env.CORS_ORIGIN === '*' || ALLOWED_ORIGINS.has(origin)) ? (origin || '*') : 'https://blackroad.io';
+    const corsOrigin = ALLOWED_ORIGINS.has(origin) ? origin : 'https://blackroad.io';
     const corsHeaders = {
       'Access-Control-Allow-Origin': corsOrigin,
       'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',

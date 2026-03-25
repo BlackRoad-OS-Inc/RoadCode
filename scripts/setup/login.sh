@@ -14,18 +14,25 @@ GREEN='\033[38;5;82m'
 RED='\033[38;5;196m'
 RESET='\033[0m'
 
-# User database (in production, this would be encrypted)
+# User database
 USERS_DB="$HOME/.blackroad/users.db"
 
 # Ensure directory exists
 mkdir -p "$HOME/.blackroad"
 
-# Initialize users database if it doesn't exist
+# Initialize users database if it doesn't exist — prompt for initial credentials
 if [ ! -f "$USERS_DB" ]; then
-    # Default: username=alexa, password=blackroad (hashed with md5 for demo)
-    echo "alexa:5f4dcc3b5aa765d61d8327deb882cf99" > "$USERS_DB"
-    echo "admin:5f4dcc3b5aa765d61d8327deb882cf99" >> "$USERS_DB"
+    echo -e "${PINK}First-time setup: create an admin account${RESET}"
+    echo -n "  Choose admin username: "
+    read -r init_user
+    echo -n "  Choose admin password: "
+    read -rs init_pass
+    echo ""
+    init_salt=$(openssl rand -hex 16)
+    init_hash=$(echo -n "${init_salt}${init_pass}" | shasum -a 256 | awk '{print $1}')
+    echo "${init_user}:${init_salt}:${init_hash}" > "$USERS_DB"
     chmod 600 "$USERS_DB"
+    echo -e "${GREEN}✓ Admin account created.${RESET}"
 fi
 
 # Function to display header with real-time clock
@@ -52,18 +59,21 @@ display_header() {
     echo ""
 }
 
-# Function to verify credentials
+# Function to verify credentials (SHA-256 with per-user salt)
 verify_credentials() {
     local username="$1"
     local password="$2"
-    local password_hash=$(echo -n "$password" | md5)
-    
-    while IFS=: read -r stored_user stored_hash; do
-        if [ "$stored_user" = "$username" ] && [ "$stored_hash" = "$password_hash" ]; then
-            return 0
+
+    while IFS=: read -r stored_user stored_salt stored_hash; do
+        if [ "$stored_user" = "$username" ]; then
+            local password_hash
+            password_hash=$(echo -n "${stored_salt}${password}" | shasum -a 256 | awk '{print $1}')
+            if [ "$stored_hash" = "$password_hash" ]; then
+                return 0
+            fi
         fi
     done < "$USERS_DB"
-    
+
     return 1
 }
 
@@ -160,8 +170,9 @@ if [ "$1" = "--add-user" ]; then
     read -rs new_pass
     echo ""
     
-    new_hash=$(echo -n "$new_pass" | md5)
-    echo "${new_user}:${new_hash}" >> "$USERS_DB"
+    new_salt=$(openssl rand -hex 16)
+    new_hash=$(echo -n "${new_salt}${new_pass}" | shasum -a 256 | awk '{print $1}')
+    echo "${new_user}:${new_salt}:${new_hash}" >> "$USERS_DB"
     echo "✓ User ${new_user} added successfully!"
     exit 0
 elif [ "$1" = "--help" ]; then
@@ -172,9 +183,7 @@ elif [ "$1" = "--help" ]; then
     echo "  blackroad --add-user   Add new user"
     echo "  blackroad --help       Show this help"
     echo ""
-    echo "Default credentials:"
-    echo "  Username: alexa"
-    echo "  Password: blackroad"
+    echo "On first run you will be prompted to create an admin account."
     exit 0
 else
     login
