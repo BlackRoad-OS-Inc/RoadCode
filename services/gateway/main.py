@@ -10,12 +10,19 @@ app = FastAPI(
     description="Sovereign API gateway for BlackRoad services",
 )
 
+ALLOWED_ORIGINS = [
+    "https://blackroad.io",
+    "https://roadcode.blackboxprogramming.io",
+    "https://lucidia.earth",
+    "https://prism.blackroad.io",
+]
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=ALLOWED_ORIGINS,
     allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
+    allow_methods=["GET", "POST", "OPTIONS"],
+    allow_headers=["Content-Type", "Authorization"],
 )
 
 START_TIME = time.time()
@@ -58,13 +65,13 @@ async def list_agents():
 async def fleet_status():
     return {
         "nodes": [
-            {"name": "alice", "ip": "192.168.4.49", "role": "gateway", "status": "online"},
-            {"name": "cecilia", "ip": "192.168.4.96", "role": "inference", "status": "online"},
-            {"name": "octavia", "ip": "192.168.4.101", "role": "platform", "status": "online"},
-            {"name": "aria", "ip": "192.168.4.98", "role": "edge", "status": "online"},
-            {"name": "lucidia", "ip": "192.168.4.38", "role": "dns-apps", "status": "online"},
-            {"name": "gematria", "ip": "67.205.x.x", "role": "tls-edge", "status": "online"},
-            {"name": "anastasia", "ip": "174.138.x.x", "role": "compute", "status": "online"},
+            {"name": "alice", "role": "gateway", "status": "online"},
+            {"name": "cecilia", "role": "inference", "status": "online"},
+            {"name": "octavia", "role": "platform", "status": "online"},
+            {"name": "aria", "role": "edge", "status": "online"},
+            {"name": "lucidia", "role": "dns-apps", "status": "online"},
+            {"name": "gematria", "role": "tls-edge", "status": "online"},
+            {"name": "anastasia", "role": "compute", "status": "online"},
         ],
         "total": 7,
     }
