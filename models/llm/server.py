@@ -17,13 +17,20 @@ app = FastAPI(
     version="1.0.0"
 )
 
-# CORS
+# CORS — restrict to known origins
+ALLOWED_ORIGINS = [
+    "https://blackroad.io",
+    "https://roadcode.blackboxprogramming.io",
+    "https://lucidia.earth",
+    "https://prism.blackroad.io",
+]
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=ALLOWED_ORIGINS,
     allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
+    allow_methods=["GET", "POST", "OPTIONS"],
+    allow_headers=["Content-Type", "Authorization"],
 )
 
 # Ollama client

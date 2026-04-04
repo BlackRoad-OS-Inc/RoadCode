@@ -1222,7 +1222,11 @@
       chatWelcome.forEach(msg => {
         const div = document.createElement('div');
         div.className = 'chat-msg agent';
-        div.innerHTML = '<div class="msg-name">' + msg.agent + '</div>' + msg.text;
+        const nameEl = document.createElement('div');
+        nameEl.className = 'msg-name';
+        nameEl.textContent = msg.agent;
+        div.appendChild(nameEl);
+        div.appendChild(document.createTextNode(msg.text));
         container.appendChild(div);
       });
     }
@@ -1255,8 +1259,11 @@
         ];
         const agentMsg = document.createElement('div');
         agentMsg.className = 'chat-msg agent';
-        agentMsg.innerHTML = '<div class="msg-name">' + agentName + '</div>' +
-          responses[Math.floor(Math.random() * responses.length)];
+        const nameDiv = document.createElement('div');
+        nameDiv.className = 'msg-name';
+        nameDiv.textContent = agentName;
+        agentMsg.appendChild(nameDiv);
+        agentMsg.appendChild(document.createTextNode(responses[Math.floor(Math.random() * responses.length)]));
         container.appendChild(agentMsg);
         container.scrollTop = container.scrollHeight;
       }, 800);
